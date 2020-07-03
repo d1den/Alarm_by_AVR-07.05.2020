@@ -1,0 +1,1879 @@
+
+ClockApplication.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000026  00800100  00000970  00000a04  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000970  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000000a  00800126  00800126  00000a2a  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000a2a  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000a5c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000270  00000000  00000000  00000a98  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00002307  00000000  00000000  00000d08  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000db1  00000000  00000000  0000300f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000198e  00000000  00000000  00003dc0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000740  00000000  00000000  00005750  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000896  00000000  00000000  00005e90  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00002988  00000000  00000000  00006726  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000270  00000000  00000000  000090ae  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	71 c0       	rjmp	.+226    	; 0xe4 <__ctors_end>
+   2:	00 00       	nop
+   4:	8c c0       	rjmp	.+280    	; 0x11e <__bad_interrupt>
+   6:	00 00       	nop
+   8:	8a c0       	rjmp	.+276    	; 0x11e <__bad_interrupt>
+   a:	00 00       	nop
+   c:	88 c0       	rjmp	.+272    	; 0x11e <__bad_interrupt>
+   e:	00 00       	nop
+  10:	86 c0       	rjmp	.+268    	; 0x11e <__bad_interrupt>
+  12:	00 00       	nop
+  14:	da c3       	rjmp	.+1972   	; 0x7ca <__vector_5>
+  16:	00 00       	nop
+  18:	00 c4       	rjmp	.+2048   	; 0x81a <__vector_6>
+  1a:	00 00       	nop
+  1c:	26 c4       	rjmp	.+2124   	; 0x86a <__vector_7>
+  1e:	00 00       	nop
+  20:	4c c4       	rjmp	.+2200   	; 0x8ba <__vector_8>
+  22:	00 00       	nop
+  24:	7c c0       	rjmp	.+248    	; 0x11e <__bad_interrupt>
+  26:	00 00       	nop
+  28:	7a c0       	rjmp	.+244    	; 0x11e <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	78 c0       	rjmp	.+240    	; 0x11e <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	59 c3       	rjmp	.+1714   	; 0x6e4 <__vector_12>
+  32:	00 00       	nop
+  34:	74 c0       	rjmp	.+232    	; 0x11e <__bad_interrupt>
+  36:	00 00       	nop
+  38:	72 c0       	rjmp	.+228    	; 0x11e <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	7d c3       	rjmp	.+1786   	; 0x738 <__vector_15>
+  3e:	00 00       	nop
+  40:	6e c0       	rjmp	.+220    	; 0x11e <__bad_interrupt>
+  42:	00 00       	nop
+  44:	6c c0       	rjmp	.+216    	; 0x11e <__bad_interrupt>
+  46:	00 00       	nop
+  48:	6a c0       	rjmp	.+212    	; 0x11e <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	68 c0       	rjmp	.+208    	; 0x11e <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	66 c0       	rjmp	.+204    	; 0x11e <__bad_interrupt>
+  52:	00 00       	nop
+  54:	64 c0       	rjmp	.+200    	; 0x11e <__bad_interrupt>
+  56:	00 00       	nop
+  58:	62 c0       	rjmp	.+196    	; 0x11e <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	60 c0       	rjmp	.+192    	; 0x11e <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	5e c0       	rjmp	.+188    	; 0x11e <__bad_interrupt>
+  62:	00 00       	nop
+  64:	5c c0       	rjmp	.+184    	; 0x11e <__bad_interrupt>
+  66:	00 00       	nop
+  68:	5a c0       	rjmp	.+180    	; 0x11e <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	58 c0       	rjmp	.+176    	; 0x11e <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	56 c0       	rjmp	.+172    	; 0x11e <__bad_interrupt>
+  72:	00 00       	nop
+  74:	54 c0       	rjmp	.+168    	; 0x11e <__bad_interrupt>
+  76:	00 00       	nop
+  78:	52 c0       	rjmp	.+164    	; 0x11e <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	50 c0       	rjmp	.+160    	; 0x11e <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	4e c0       	rjmp	.+156    	; 0x11e <__bad_interrupt>
+  82:	00 00       	nop
+  84:	4c c0       	rjmp	.+152    	; 0x11e <__bad_interrupt>
+  86:	00 00       	nop
+  88:	4a c0       	rjmp	.+148    	; 0x11e <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	e1 02       	muls	r30, r17
+  8e:	e7 02       	muls	r30, r23
+  90:	ed 02       	muls	r30, r29
+  92:	f3 02       	muls	r31, r19
+  94:	f9 02       	muls	r31, r25
+  96:	ff 02       	muls	r31, r31
+  98:	05 03       	mulsu	r16, r21
+  9a:	0b 03       	fmul	r16, r19
+  9c:	11 03       	mulsu	r17, r17
+  9e:	17 03       	mulsu	r17, r23
+  a0:	1d 03       	fmul	r17, r21
+  a2:	23 03       	mulsu	r18, r19
+
+000000a4 <__trampolines_end>:
+  a4:	41 a0       	ldd	r4, Z+33	; 0x21
+  a6:	42 a1       	ldd	r20, Z+34	; 0x22
+  a8:	e0 45       	sbci	r30, 0x50	; 80
+  aa:	a3 a4       	ldd	r10, Z+43	; 0x2b
+  ac:	a5 a6       	std	Z+45, r10	; 0x2d
+  ae:	4b a7       	std	Y+43, r20	; 0x2b
+  b0:	4d 48       	sbci	r20, 0x8D	; 141
+  b2:	4f a8       	ldd	r4, Y+55	; 0x37
+  b4:	50 43       	sbci	r21, 0x30	; 48
+  b6:	54 a9       	ldd	r21, Z+52	; 0x34
+  b8:	aa 58       	subi	r26, 0x8A	; 138
+  ba:	e1 ab       	std	Z+49, r30	; 0x31
+  bc:	ac e2       	ldi	r26, 0x2C	; 44
+  be:	ad ae       	std	Y+61, r10	; 0x3d
+  c0:	ad af       	std	Y+61, r26	; 0x3d
+  c2:	b0 b1       	in	r27, 0x00	; 0
+  c4:	61 b2       	in	r6, 0x11	; 17
+  c6:	b3 b4       	in	r11, 0x23	; 35
+  c8:	e3 65       	ori	r30, 0x53	; 83
+  ca:	b6 b7       	in	r27, 0x36	; 54
+  cc:	b8 b9       	out	0x08, r27	; 8
+  ce:	ba bb       	out	0x1a, r27	; 26
+  d0:	bc bd       	out	0x2c, r27	; 44
+  d2:	6f be       	out	0x3f, r6	; 63
+  d4:	70 63       	ori	r23, 0x30	; 48
+  d6:	bf 79       	andi	r27, 0x9F	; 159
+  d8:	e4 78       	andi	r30, 0x84	; 132
+  da:	e5 c0       	rjmp	.+458    	; 0x2a6 <LCDcommand+0x4>
+  dc:	c1 e6       	ldi	r28, 0x61	; 97
+  de:	c2 c3       	rjmp	.+1924   	; 0x864 <__vector_6+0x4a>
+  e0:	c4 c5       	rjmp	.+2952   	; 0xc6a <__data_load_end+0x2d4>
+  e2:	c6 c7       	rjmp	.+3980   	; 0x1070 <__data_load_end+0x6da>
+
+000000e4 <__ctors_end>:
+  e4:	11 24       	eor	r1, r1
+  e6:	1f be       	out	0x3f, r1	; 63
+  e8:	cf ef       	ldi	r28, 0xFF	; 255
+  ea:	d0 e1       	ldi	r29, 0x10	; 16
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	cd bf       	out	0x3d, r28	; 61
+
+000000f0 <__do_copy_data>:
+  f0:	11 e0       	ldi	r17, 0x01	; 1
+  f2:	a0 e0       	ldi	r26, 0x00	; 0
+  f4:	b1 e0       	ldi	r27, 0x01	; 1
+  f6:	e0 e7       	ldi	r30, 0x70	; 112
+  f8:	f9 e0       	ldi	r31, 0x09	; 9
+  fa:	00 e0       	ldi	r16, 0x00	; 0
+  fc:	0b bf       	out	0x3b, r16	; 59
+  fe:	02 c0       	rjmp	.+4      	; 0x104 <__do_copy_data+0x14>
+ 100:	07 90       	elpm	r0, Z+
+ 102:	0d 92       	st	X+, r0
+ 104:	a6 32       	cpi	r26, 0x26	; 38
+ 106:	b1 07       	cpc	r27, r17
+ 108:	d9 f7       	brne	.-10     	; 0x100 <__do_copy_data+0x10>
+
+0000010a <__do_clear_bss>:
+ 10a:	21 e0       	ldi	r18, 0x01	; 1
+ 10c:	a6 e2       	ldi	r26, 0x26	; 38
+ 10e:	b1 e0       	ldi	r27, 0x01	; 1
+ 110:	01 c0       	rjmp	.+2      	; 0x114 <.do_clear_bss_start>
+
+00000112 <.do_clear_bss_loop>:
+ 112:	1d 92       	st	X+, r1
+
+00000114 <.do_clear_bss_start>:
+ 114:	a0 33       	cpi	r26, 0x30	; 48
+ 116:	b2 07       	cpc	r27, r18
+ 118:	e1 f7       	brne	.-8      	; 0x112 <.do_clear_bss_loop>
+ 11a:	f7 d3       	rcall	.+2030   	; 0x90a <main>
+ 11c:	27 c4       	rjmp	.+2126   	; 0x96c <_exit>
+
+0000011e <__bad_interrupt>:
+ 11e:	70 cf       	rjmp	.-288    	; 0x0 <__vectors>
+
+00000120 <I2C_Start>:
+
+
+byte I2C_Start()
+// Генерация start condition по шине I2C.
+{
+	TWCR = TW_START;           // отправка send
+ 120:	84 ea       	ldi	r24, 0xA4	; 164
+ 122:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+	while (!TW_READY);         // ожидание завершения
+ 126:	e4 e7       	ldi	r30, 0x74	; 116
+ 128:	f0 e0       	ldi	r31, 0x00	; 0
+ 12a:	80 81       	ld	r24, Z
+ 12c:	88 23       	and	r24, r24
+ 12e:	ec f7       	brge	.-6      	; 0x12a <I2C_Start+0xa>
+	return (TW_STATUS==0x08);  // возврат 1, если устройство найдено, иначе возврат 0
+ 130:	90 91 71 00 	lds	r25, 0x0071	; 0x800071 <__TEXT_REGION_LENGTH__+0x7e0071>
+ 134:	98 7f       	andi	r25, 0xF8	; 248
+ 136:	81 e0       	ldi	r24, 0x01	; 1
+ 138:	98 30       	cpi	r25, 0x08	; 8
+ 13a:	09 f0       	breq	.+2      	; 0x13e <I2C_Start+0x1e>
+ 13c:	80 e0       	ldi	r24, 0x00	; 0
+}
+ 13e:	08 95       	ret
+
+00000140 <I2C_SendAddr>:
+
+byte I2C_SendAddr(byte addr)
+// Послать адрес шины для подчиненного устройства.
+{
+	TWDR = addr;               // загрузка адреса устройства
+ 140:	80 93 73 00 	sts	0x0073, r24	; 0x800073 <__TEXT_REGION_LENGTH__+0x7e0073>
+	TWCR = TW_SEND;            // и отправка его
+ 144:	84 e8       	ldi	r24, 0x84	; 132
+ 146:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+	while (!TW_READY);         // ожидание завершения
+ 14a:	e4 e7       	ldi	r30, 0x74	; 116
+ 14c:	f0 e0       	ldi	r31, 0x00	; 0
+ 14e:	80 81       	ld	r24, Z
+ 150:	88 23       	and	r24, r24
+ 152:	ec f7       	brge	.-6      	; 0x14e <I2C_SendAddr+0xe>
+	return (TW_STATUS==0x18);  // возврат 1, если устройство найдено, иначе возврат 0
+ 154:	90 91 71 00 	lds	r25, 0x0071	; 0x800071 <__TEXT_REGION_LENGTH__+0x7e0071>
+ 158:	98 7f       	andi	r25, 0xF8	; 248
+ 15a:	81 e0       	ldi	r24, 0x01	; 1
+ 15c:	98 31       	cpi	r25, 0x18	; 24
+ 15e:	09 f0       	breq	.+2      	; 0x162 <I2C_SendAddr+0x22>
+ 160:	80 e0       	ldi	r24, 0x00	; 0
+}
+ 162:	08 95       	ret
+
+00000164 <I2C_Write>:
+
+byte I2C_Write (byte data)
+// Отправка данных подчиненному устройству.
+{
+	TWDR = data;               // загрузка данных для отправки
+ 164:	80 93 73 00 	sts	0x0073, r24	; 0x800073 <__TEXT_REGION_LENGTH__+0x7e0073>
+	TWCR = TW_SEND;            // и передача их
+ 168:	84 e8       	ldi	r24, 0x84	; 132
+ 16a:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+	while (!TW_READY);         // ожидание завершения
+ 16e:	e4 e7       	ldi	r30, 0x74	; 116
+ 170:	f0 e0       	ldi	r31, 0x00	; 0
+ 172:	80 81       	ld	r24, Z
+ 174:	88 23       	and	r24, r24
+ 176:	ec f7       	brge	.-6      	; 0x172 <I2C_Write+0xe>
+	return (TW_STATUS!=0x28);  // возврат 1, если устройство найдено, иначе возврат 0
+ 178:	90 91 71 00 	lds	r25, 0x0071	; 0x800071 <__TEXT_REGION_LENGTH__+0x7e0071>
+ 17c:	98 7f       	andi	r25, 0xF8	; 248
+ 17e:	81 e0       	ldi	r24, 0x01	; 1
+ 180:	98 32       	cpi	r25, 0x28	; 40
+ 182:	09 f4       	brne	.+2      	; 0x186 <I2C_Write+0x22>
+ 184:	80 e0       	ldi	r24, 0x00	; 0
+}
+ 186:	08 95       	ret
+
+00000188 <I2C_ReadNACK>:
+
+
+byte I2C_ReadNACK ()    
+// Чтение байта данных от подчиненного устройства
+{
+	TWCR = TW_NACK;      // NACK означает, что будет прочитан последний байт,
+ 188:	84 e8       	ldi	r24, 0x84	; 132
+ 18a:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+	//  больше байт прочитано не будет.
+	while (!TW_READY);   // ожидание завершения
+ 18e:	e4 e7       	ldi	r30, 0x74	; 116
+ 190:	f0 e0       	ldi	r31, 0x00	; 0
+ 192:	80 81       	ld	r24, Z
+ 194:	88 23       	and	r24, r24
+ 196:	ec f7       	brge	.-6      	; 0x192 <I2C_ReadNACK+0xa>
+	return TWDR;         // возврат прочитанного байта
+ 198:	80 91 73 00 	lds	r24, 0x0073	; 0x800073 <__TEXT_REGION_LENGTH__+0x7e0073>
+}
+ 19c:	08 95       	ret
+
+0000019e <I2C_WriteRegister>:
+
+void I2C_WriteRegister(byte busAddr,byte deviceRegister, byte data)
+// Записать значение в регистр устройства
+{
+ 19e:	1f 93       	push	r17
+ 1a0:	cf 93       	push	r28
+ 1a2:	df 93       	push	r29
+ 1a4:	18 2f       	mov	r17, r24
+ 1a6:	d6 2f       	mov	r29, r22
+ 1a8:	c4 2f       	mov	r28, r20
+	I2C_Start(); // генерация старт
+ 1aa:	ba df       	rcall	.-140    	; 0x120 <I2C_Start>
+	I2C_SendAddr(busAddr);      // послать адрес шины
+ 1ac:	81 2f       	mov	r24, r17
+ 1ae:	c8 df       	rcall	.-112    	; 0x140 <I2C_SendAddr>
+	I2C_Write(deviceRegister); // послать 1 байт - адрес внутреннего регистра микросхемы
+ 1b0:	8d 2f       	mov	r24, r29
+ 1b2:	d8 df       	rcall	.-80     	; 0x164 <I2C_Write>
+	I2C_Write(data);           // послать 2 байт - данные, которые надо записать
+ 1b4:	8c 2f       	mov	r24, r28
+ 1b6:	d6 df       	rcall	.-84     	; 0x164 <I2C_Write>
+ 1b8:	84 e9       	ldi	r24, 0x94	; 148
+	I2C_Stop(); // Остановить передачу
+ 1ba:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+ 1be:	df 91       	pop	r29
+}
+ 1c0:	cf 91       	pop	r28
+ 1c2:	1f 91       	pop	r17
+ 1c4:	08 95       	ret
+
+000001c6 <I2C_ReadRegister>:
+ 1c6:	cf 93       	push	r28
+
+byte I2C_ReadRegister(byte busAddr, byte deviceRegister)
+// Чтение данных из регистра устройства
+{
+ 1c8:	df 93       	push	r29
+ 1ca:	c8 2f       	mov	r28, r24
+ 1cc:	d6 2f       	mov	r29, r22
+	byte data = 0; // Создаём байт данных
+	I2C_Start(); // Начало общения с устройством
+ 1ce:	a8 df       	rcall	.-176    	; 0x120 <I2C_Start>
+	I2C_SendAddr(busAddr);      // послать адрес шины
+ 1d0:	8c 2f       	mov	r24, r28
+ 1d2:	b6 df       	rcall	.-148    	; 0x140 <I2C_SendAddr>
+	I2C_Write(deviceRegister); // установка указателя на регистр
+ 1d4:	8d 2f       	mov	r24, r29
+ 1d6:	c6 df       	rcall	.-116    	; 0x164 <I2C_Write>
+	I2C_Start();// Начало общения с устройством
+ 1d8:	a3 df       	rcall	.-186    	; 0x120 <I2C_Start>
+	I2C_SendAddr(busAddr+READ); // перезапуск в качестве операции чтения
+ 1da:	81 e0       	ldi	r24, 0x01	; 1
+ 1dc:	8c 0f       	add	r24, r28
+ 1de:	b0 df       	rcall	.-160    	; 0x140 <I2C_SendAddr>
+ 1e0:	d3 df       	rcall	.-90     	; 0x188 <I2C_ReadNACK>
+	data = I2C_ReadNACK();     // чтение данных регистра
+ 1e2:	94 e9       	ldi	r25, 0x94	; 148
+ 1e4:	90 93 74 00 	sts	0x0074, r25	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+	I2C_Stop(); // Преращение считывания
+ 1e8:	df 91       	pop	r29
+ 1ea:	cf 91       	pop	r28
+	return data; // Вывод данных
+}
+ 1ec:	08 95       	ret
+
+000001ee <DS1307_GetTime>:
+ 1ee:	ef 92       	push	r14
+ 1f0:	ff 92       	push	r15
+
+void DS1307_GetTime(byte *hours, byte *minutes, byte *seconds)
+// Метод возвращает время с микросхемы часов в формате BCD (в старшем полубайте десятки числа, в младшем - единицы)
+{
+ 1f2:	0f 93       	push	r16
+ 1f4:	1f 93       	push	r17
+ 1f6:	cf 93       	push	r28
+ 1f8:	df 93       	push	r29
+ 1fa:	ec 01       	movw	r28, r24
+ 1fc:	7b 01       	movw	r14, r22
+ 1fe:	8a 01       	movw	r16, r20
+	*hours = I2C_ReadRegister(DS1307,HOURS_REGISTER); // Считывает значения с регистра, хранящего часы и передаёт их через указатель
+ 200:	62 e0       	ldi	r22, 0x02	; 2
+ 202:	80 ed       	ldi	r24, 0xD0	; 208
+ 204:	e0 df       	rcall	.-64     	; 0x1c6 <I2C_ReadRegister>
+ 206:	88 83       	st	Y, r24
+	*minutes = I2C_ReadRegister(DS1307,MINUTES_REGISTER); // Минуты
+ 208:	61 e0       	ldi	r22, 0x01	; 1
+ 20a:	80 ed       	ldi	r24, 0xD0	; 208
+ 20c:	dc df       	rcall	.-72     	; 0x1c6 <I2C_ReadRegister>
+ 20e:	f7 01       	movw	r30, r14
+ 210:	80 83       	st	Z, r24
+	*seconds = I2C_ReadRegister(DS1307,SECONDS_REGISTER); // Секунды
+ 212:	60 e0       	ldi	r22, 0x00	; 0
+ 214:	80 ed       	ldi	r24, 0xD0	; 208
+ 216:	d7 df       	rcall	.-82     	; 0x1c6 <I2C_ReadRegister>
+ 218:	f8 01       	movw	r30, r16
+ 21a:	80 83       	st	Z, r24
+	if (*hours & 0b01000000) // проверяем, установлен ли режим 12 часов
+ 21c:	88 81       	ld	r24, Y
+ 21e:	86 ff       	sbrs	r24, 6
+ 220:	03 c0       	rjmp	.+6      	; 0x228 <DS1307_GetTime+0x3a>
+	*hours &= 0b00011111; // используются младшие 5 бит, с помощью наложения маски на часы
+ 222:	8f 71       	andi	r24, 0x1F	; 31
+ 224:	88 83       	st	Y, r24
+ 226:	02 c0       	rjmp	.+4      	; 0x22c <DS1307_GetTime+0x3e>
+	else
+	*hours &= 0b00111111; // режим 24 часов: используются младшие 6 бит
+ 228:	8f 73       	andi	r24, 0x3F	; 63
+ 22a:	88 83       	st	Y, r24
+}
+ 22c:	df 91       	pop	r29
+ 22e:	cf 91       	pop	r28
+ 230:	1f 91       	pop	r17
+ 232:	0f 91       	pop	r16
+ 234:	ff 90       	pop	r15
+ 236:	ef 90       	pop	r14
+ 238:	08 95       	ret
+
+0000023a <Busy_flag>:
+{
+	LCDcommand(0b1110);
+}
+void LCDcursor_vi(void)		//Включить оба курсора
+{
+	LCDcommand(0b1111);
+ 23a:	1a ba       	out	0x1a, r1	; 26
+ 23c:	8f ef       	ldi	r24, 0xFF	; 255
+ 23e:	8b bb       	out	0x1b, r24	; 27
+ 240:	a9 9a       	sbi	0x15, 1	; 21
+ 242:	a8 9a       	sbi	0x15, 0	; 21
+ 244:	00 00       	nop
+ 246:	00 00       	nop
+ 248:	89 b3       	in	r24, 0x19	; 25
+ 24a:	a8 98       	cbi	0x15, 0	; 21
+ 24c:	00 00       	nop
+ 24e:	00 00       	nop
+ 250:	88 23       	and	r24, r24
+ 252:	bc f3       	brlt	.-18     	; 0x242 <Busy_flag+0x8>
+ 254:	a9 98       	cbi	0x15, 1	; 21
+ 256:	08 95       	ret
+
+00000258 <Strob>:
+ 258:	a8 9a       	sbi	0x15, 0	; 21
+ 25a:	85 e0       	ldi	r24, 0x05	; 5
+ 25c:	8a 95       	dec	r24
+ 25e:	f1 f7       	brne	.-4      	; 0x25c <Strob+0x4>
+ 260:	00 00       	nop
+ 262:	a8 98       	cbi	0x15, 0	; 21
+ 264:	08 95       	ret
+
+00000266 <Send_byte>:
+ 266:	9f ef       	ldi	r25, 0xFF	; 255
+ 268:	9a bb       	out	0x1a, r25	; 26
+ 26a:	1b ba       	out	0x1b, r1	; 27
+ 26c:	80 fd       	sbrc	r24, 0
+ 26e:	d8 9a       	sbi	0x1b, 0	; 27
+ 270:	86 95       	lsr	r24
+ 272:	80 fd       	sbrc	r24, 0
+ 274:	d9 9a       	sbi	0x1b, 1	; 27
+ 276:	86 95       	lsr	r24
+ 278:	80 fd       	sbrc	r24, 0
+ 27a:	da 9a       	sbi	0x1b, 2	; 27
+ 27c:	86 95       	lsr	r24
+ 27e:	80 fd       	sbrc	r24, 0
+ 280:	db 9a       	sbi	0x1b, 3	; 27
+ 282:	86 95       	lsr	r24
+ 284:	80 fd       	sbrc	r24, 0
+ 286:	dc 9a       	sbi	0x1b, 4	; 27
+ 288:	86 95       	lsr	r24
+ 28a:	80 fd       	sbrc	r24, 0
+ 28c:	dd 9a       	sbi	0x1b, 5	; 27
+ 28e:	86 95       	lsr	r24
+ 290:	80 fd       	sbrc	r24, 0
+ 292:	de 9a       	sbi	0x1b, 6	; 27
+ 294:	86 95       	lsr	r24
+ 296:	09 f0       	breq	.+2      	; 0x29a <Send_byte+0x34>
+ 298:	df 9a       	sbi	0x1b, 7	; 27
+ 29a:	de df       	rcall	.-68     	; 0x258 <Strob>
+ 29c:	1a ba       	out	0x1a, r1	; 26
+ 29e:	1b ba       	out	0x1b, r1	; 27
+ 2a0:	08 95       	ret
+
+000002a2 <LCDcommand>:
+ 2a2:	cf 93       	push	r28
+ 2a4:	c8 2f       	mov	r28, r24
+ 2a6:	c9 df       	rcall	.-110    	; 0x23a <Busy_flag>
+ 2a8:	8c 2f       	mov	r24, r28
+ 2aa:	dd df       	rcall	.-70     	; 0x266 <Send_byte>
+ 2ac:	cf 91       	pop	r28
+ 2ae:	08 95       	ret
+
+000002b0 <LCDdata>:
+ 2b0:	cf 93       	push	r28
+ 2b2:	c8 2f       	mov	r28, r24
+ 2b4:	c2 df       	rcall	.-124    	; 0x23a <Busy_flag>
+ 2b6:	aa 9a       	sbi	0x15, 2	; 21
+ 2b8:	c0 3c       	cpi	r28, 0xC0	; 192
+ 2ba:	30 f0       	brcs	.+12     	; 0x2c8 <LCDdata+0x18>
+ 2bc:	e0 e4       	ldi	r30, 0x40	; 64
+ 2be:	ec 0f       	add	r30, r28
+ 2c0:	f0 e0       	ldi	r31, 0x00	; 0
+ 2c2:	ec 55       	subi	r30, 0x5C	; 92
+ 2c4:	ff 4f       	sbci	r31, 0xFF	; 255
+ 2c6:	c4 91       	lpm	r28, Z
+ 2c8:	8c 2f       	mov	r24, r28
+ 2ca:	cd df       	rcall	.-102    	; 0x266 <Send_byte>
+ 2cc:	aa 98       	cbi	0x15, 2	; 21
+ 2ce:	cf 91       	pop	r28
+ 2d0:	08 95       	ret
+
+000002d2 <LCDGotoXY>:
+ 2d2:	61 30       	cpi	r22, 0x01	; 1
+ 2d4:	09 f4       	brne	.+2      	; 0x2d8 <LCDGotoXY+0x6>
+ 2d6:	80 5c       	subi	r24, 0xC0	; 192
+ 2d8:	80 68       	ori	r24, 0x80	; 128
+ 2da:	e3 cf       	rjmp	.-58     	; 0x2a2 <LCDcommand>
+ 2dc:	08 95       	ret
+
+000002de <LCDstringXY>:
+ 2de:	cf 93       	push	r28
+ 2e0:	df 93       	push	r29
+ 2e2:	ec 01       	movw	r28, r24
+ 2e4:	86 2f       	mov	r24, r22
+ 2e6:	64 2f       	mov	r22, r20
+ 2e8:	f4 df       	rcall	.-24     	; 0x2d2 <LCDGotoXY>
+ 2ea:	88 81       	ld	r24, Y
+ 2ec:	88 23       	and	r24, r24
+ 2ee:	29 f0       	breq	.+10     	; 0x2fa <LCDstringXY+0x1c>
+ 2f0:	21 96       	adiw	r28, 0x01	; 1
+ 2f2:	de df       	rcall	.-68     	; 0x2b0 <LCDdata>
+ 2f4:	89 91       	ld	r24, Y+
+ 2f6:	81 11       	cpse	r24, r1
+ 2f8:	fc cf       	rjmp	.-8      	; 0x2f2 <LCDstringXY+0x14>
+ 2fa:	df 91       	pop	r29
+ 2fc:	cf 91       	pop	r28
+ 2fe:	08 95       	ret
+
+00000300 <LCDinit>:
+ 300:	cf 93       	push	r28
+ 302:	2f ef       	ldi	r18, 0xFF	; 255
+ 304:	81 ee       	ldi	r24, 0xE1	; 225
+ 306:	94 e0       	ldi	r25, 0x04	; 4
+ 308:	21 50       	subi	r18, 0x01	; 1
+ 30a:	80 40       	sbci	r24, 0x00	; 0
+ 30c:	90 40       	sbci	r25, 0x00	; 0
+ 30e:	e1 f7       	brne	.-8      	; 0x308 <LCDinit+0x8>
+ 310:	00 c0       	rjmp	.+0      	; 0x312 <LCDinit+0x12>
+ 312:	00 00       	nop
+ 314:	84 b3       	in	r24, 0x14	; 20
+ 316:	87 60       	ori	r24, 0x07	; 7
+ 318:	84 bb       	out	0x14, r24	; 20
+ 31a:	85 b3       	in	r24, 0x15	; 21
+ 31c:	88 7f       	andi	r24, 0xF8	; 248
+ 31e:	85 bb       	out	0x15, r24	; 21
+ 320:	8f ef       	ldi	r24, 0xFF	; 255
+ 322:	8a bb       	out	0x1a, r24	; 26
+ 324:	1b ba       	out	0x1b, r1	; 27
+ 326:	c3 e0       	ldi	r28, 0x03	; 3
+ 328:	8b b3       	in	r24, 0x1b	; 27
+ 32a:	80 63       	ori	r24, 0x30	; 48
+ 32c:	8b bb       	out	0x1b, r24	; 27
+ 32e:	94 df       	rcall	.-216    	; 0x258 <Strob>
+ 330:	8f e1       	ldi	r24, 0x1F	; 31
+ 332:	9e e4       	ldi	r25, 0x4E	; 78
+ 334:	01 97       	sbiw	r24, 0x01	; 1
+ 336:	f1 f7       	brne	.-4      	; 0x334 <LCDinit+0x34>
+ 338:	00 c0       	rjmp	.+0      	; 0x33a <LCDinit+0x3a>
+ 33a:	00 00       	nop
+ 33c:	c1 50       	subi	r28, 0x01	; 1
+ 33e:	a1 f7       	brne	.-24     	; 0x328 <LCDinit+0x28>
+ 340:	88 e3       	ldi	r24, 0x38	; 56
+ 342:	af df       	rcall	.-162    	; 0x2a2 <LCDcommand>
+ 344:	8c e0       	ldi	r24, 0x0C	; 12
+ 346:	ad df       	rcall	.-166    	; 0x2a2 <LCDcommand>
+ 348:	86 e0       	ldi	r24, 0x06	; 6
+ 34a:	ab df       	rcall	.-170    	; 0x2a2 <LCDcommand>
+ 34c:	82 e0       	ldi	r24, 0x02	; 2
+ 34e:	a9 df       	rcall	.-174    	; 0x2a2 <LCDcommand>
+ 350:	81 e0       	ldi	r24, 0x01	; 1
+ 352:	a7 df       	rcall	.-178    	; 0x2a2 <LCDcommand>
+ 354:	cf 91       	pop	r28
+ 356:	08 95       	ret
+
+00000358 <LCDblank>:
+ 358:	88 e0       	ldi	r24, 0x08	; 8
+ 35a:	a3 cf       	rjmp	.-186    	; 0x2a2 <LCDcommand>
+ 35c:	08 95       	ret
+
+0000035e <LCDnblank>:
+ 35e:	8c e0       	ldi	r24, 0x0C	; 12
+ 360:	a0 cf       	rjmp	.-192    	; 0x2a2 <LCDcommand>
+ 362:	08 95       	ret
+
+00000364 <LCDcursor_on>:
+ 364:	8e e0       	ldi	r24, 0x0E	; 14
+ 366:	9d cf       	rjmp	.-198    	; 0x2a2 <LCDcommand>
+ 368:	08 95       	ret
+
+0000036a <LCDcursorOFF>:
+}
+void LCDcursorOFF(void)		//Выключить курсор
+{
+	LCDcommand(0b1100);
+ 36a:	8c e0       	ldi	r24, 0x0C	; 12
+ 36c:	9a cf       	rjmp	.-204    	; 0x2a2 <LCDcommand>
+ 36e:	08 95       	ret
+
+00000370 <DS1307_GetRealTime>:
+Time timeVar; // Создаём объект структуры, в котором будем хранить значения
+unsigned int beep=0; // Переменная, хранящая количество сигналов при срабатывании будильника
+void DS1307_GetRealTime() 
+// Метод,считывающий реальное время из ds1307 в структуру timeVar
+{
+	cli(); // Запрещаем прерывания
+ 370:	f8 94       	cli
+	// Вызываем метод, записывающий значения времени
+	DS1307_GetTime(&(timeVar.realHours),&(timeVar.realMinutes),&(timeVar.realSeconds)); 
+ 372:	4c e2       	ldi	r20, 0x2C	; 44
+ 374:	51 e0       	ldi	r21, 0x01	; 1
+ 376:	6b e2       	ldi	r22, 0x2B	; 43
+ 378:	71 e0       	ldi	r23, 0x01	; 1
+ 37a:	8a e2       	ldi	r24, 0x2A	; 42
+ 37c:	91 e0       	ldi	r25, 0x01	; 1
+ 37e:	37 df       	rcall	.-402    	; 0x1ee <DS1307_GetTime>
+	sei(); // Разрешаем прерывания
+ 380:	78 94       	sei
+ 382:	08 95       	ret
+
+00000384 <DS1307_SetTime>:
+}
+
+void DS1307_SetTime() 
+// Метод, записывающий время в ds1307 из структуры timeVar
+{
+ 384:	cf 93       	push	r28
+ 386:	df 93       	push	r29
+	cli(); // Запрещаем прерывания
+ 388:	f8 94       	cli
+	I2C_WriteRegister(DS1307,HOURS_REGISTER, timeVar.realHours); // Записываем в ds1307 часы
+ 38a:	ca e2       	ldi	r28, 0x2A	; 42
+ 38c:	d1 e0       	ldi	r29, 0x01	; 1
+ 38e:	48 81       	ld	r20, Y
+ 390:	62 e0       	ldi	r22, 0x02	; 2
+ 392:	80 ed       	ldi	r24, 0xD0	; 208
+ 394:	04 df       	rcall	.-504    	; 0x19e <I2C_WriteRegister>
+	I2C_WriteRegister(DS1307,MINUTES_REGISTER, timeVar.realMinutes); // Минуты
+ 396:	49 81       	ldd	r20, Y+1	; 0x01
+ 398:	61 e0       	ldi	r22, 0x01	; 1
+ 39a:	80 ed       	ldi	r24, 0xD0	; 208
+ 39c:	00 df       	rcall	.-512    	; 0x19e <I2C_WriteRegister>
+	I2C_WriteRegister(DS1307,SECONDS_REGISTER, timeVar.realSeconds); // Секунды
+ 39e:	4a 81       	ldd	r20, Y+2	; 0x02
+ 3a0:	60 e0       	ldi	r22, 0x00	; 0
+ 3a2:	80 ed       	ldi	r24, 0xD0	; 208
+ 3a4:	fc de       	rcall	.-520    	; 0x19e <I2C_WriteRegister>
+	sei(); // Разрешаем прерывания
+ 3a6:	78 94       	sei
+}
+ 3a8:	df 91       	pop	r29
+ 3aa:	cf 91       	pop	r28
+ 3ac:	08 95       	ret
+
+000003ae <TwoDigits>:
+
+void TwoDigits(byte data)
+// Метод, выводящий значение цифры на экран.
+// На входе получает 2 цифры в формате BCD, и выводит их на дисплей LCD.
+{
+ 3ae:	cf 93       	push	r28
+ 3b0:	c8 2f       	mov	r28, r24
+	byte high = data>>4;    // получить старшие 4 бита с помощью сдвига вправо
+	LCDdata(high+'0');     // отобразить старшую цифру. Прибавляем символ '0' к нашему числу,
+ 3b2:	82 95       	swap	r24
+ 3b4:	8f 70       	andi	r24, 0x0F	; 15
+ 3b6:	80 5d       	subi	r24, 0xD0	; 208
+ 3b8:	7b df       	rcall	.-266    	; 0x2b0 <LCDdata>
+	// так как от него идут номера символов цифр
+	data &= 0b00001111;           // получить младшие 4 бита
+	LCDdata(data+'0');     // отобразить младшую цифру
+ 3ba:	8c 2f       	mov	r24, r28
+ 3bc:	8f 70       	andi	r24, 0x0F	; 15
+ 3be:	80 5d       	subi	r24, 0xD0	; 208
+ 3c0:	77 df       	rcall	.-274    	; 0x2b0 <LCDdata>
+}
+ 3c2:	cf 91       	pop	r28
+ 3c4:	08 95       	ret
+
+000003c6 <LCDGotoXYNUM>:
+
+void LCDGotoXYNUM(byte Num)
+// Метод, выполняющий переход курсора в координату, заданную массивом координат курсора
+{
+	LCDGotoXY(CursorPositionMas[Num][0],CursorPositionMas[Num][1]);
+ 3c6:	e8 2f       	mov	r30, r24
+ 3c8:	f0 e0       	ldi	r31, 0x00	; 0
+ 3ca:	ee 0f       	add	r30, r30
+ 3cc:	ff 1f       	adc	r31, r31
+ 3ce:	e0 50       	subi	r30, 0x00	; 0
+ 3d0:	ff 4f       	sbci	r31, 0xFF	; 255
+ 3d2:	61 81       	ldd	r22, Z+1	; 0x01
+ 3d4:	80 81       	ld	r24, Z
+ 3d6:	7d cf       	rjmp	.-262    	; 0x2d2 <LCDGotoXY>
+ 3d8:	08 95       	ret
+
+000003da <ScreenUpdate>:
+}
+
+void ScreenUpdate()
+// Метод, выводящий информацию на экран
+{
+ 3da:	cf 93       	push	r28
+ 3dc:	df 93       	push	r29
+	cli(); // Запрещаем прерывания
+ 3de:	f8 94       	cli
+	LCDcursorOFF(); // Выключаем курсор
+ 3e0:	c4 df       	rcall	.-120    	; 0x36a <LCDcursorOFF>
+	LCDstringXY("Time=",0,0); // Выводим на первой строке текст 
+ 3e2:	40 e0       	ldi	r20, 0x00	; 0
+ 3e4:	60 e0       	ldi	r22, 0x00	; 0
+ 3e6:	88 e1       	ldi	r24, 0x18	; 24
+ 3e8:	91 e0       	ldi	r25, 0x01	; 1
+ 3ea:	79 df       	rcall	.-270    	; 0x2de <LCDstringXY>
+	LCDGotoXYNUM(FIRSTLINE); // Курсор переходит в координату первого элемента времени 
+ 3ec:	80 e0       	ldi	r24, 0x00	; 0
+ 3ee:	eb df       	rcall	.-42     	; 0x3c6 <LCDGotoXYNUM>
+ 3f0:	ca e2       	ldi	r28, 0x2A	; 42
+	TwoDigits(timeVar.realHours); // Отображаем часы
+ 3f2:	d1 e0       	ldi	r29, 0x01	; 1
+ 3f4:	88 81       	ld	r24, Y
+ 3f6:	db df       	rcall	.-74     	; 0x3ae <TwoDigits>
+	LCDdata(':'); // Выводим двоеточие
+ 3f8:	8a e3       	ldi	r24, 0x3A	; 58
+ 3fa:	5a df       	rcall	.-332    	; 0x2b0 <LCDdata>
+	TwoDigits(timeVar.realMinutes); // Минуты
+ 3fc:	89 81       	ldd	r24, Y+1	; 0x01
+ 3fe:	d7 df       	rcall	.-82     	; 0x3ae <TwoDigits>
+	LCDdata(':'); // Двоеточие
+ 400:	8a e3       	ldi	r24, 0x3A	; 58
+ 402:	56 df       	rcall	.-340    	; 0x2b0 <LCDdata>
+	TwoDigits(timeVar.realSeconds); // Секунды
+ 404:	8a 81       	ldd	r24, Y+2	; 0x02
+ 406:	d3 df       	rcall	.-90     	; 0x3ae <TwoDigits>
+	LCDstringXY("Alarm=",0,1); // Выводим на следующей строке текст, что это будильник
+ 408:	41 e0       	ldi	r20, 0x01	; 1
+ 40a:	60 e0       	ldi	r22, 0x00	; 0
+ 40c:	8e e1       	ldi	r24, 0x1E	; 30
+ 40e:	91 e0       	ldi	r25, 0x01	; 1
+	LCDGotoXYNUM(SECONDLINE); // Переходим к первой координате будильника
+ 410:	66 df       	rcall	.-308    	; 0x2de <LCDstringXY>
+ 412:	86 e0       	ldi	r24, 0x06	; 6
+	TwoDigits(timeVar.alarmHours); // Далее аналогично ыводим время будильника
+ 414:	d8 df       	rcall	.-80     	; 0x3c6 <LCDGotoXYNUM>
+ 416:	8b 81       	ldd	r24, Y+3	; 0x03
+	LCDdata(':');
+ 418:	ca df       	rcall	.-108    	; 0x3ae <TwoDigits>
+ 41a:	8a e3       	ldi	r24, 0x3A	; 58
+ 41c:	49 df       	rcall	.-366    	; 0x2b0 <LCDdata>
+	TwoDigits(timeVar.alarmMinutes);
+ 41e:	8c 81       	ldd	r24, Y+4	; 0x04
+ 420:	c6 df       	rcall	.-116    	; 0x3ae <TwoDigits>
+	LCDdata(':');
+ 422:	8a e3       	ldi	r24, 0x3A	; 58
+ 424:	45 df       	rcall	.-374    	; 0x2b0 <LCDdata>
+ 426:	8d 81       	ldd	r24, Y+5	; 0x05
+	TwoDigits(timeVar.alarmSeconds);
+ 428:	c2 df       	rcall	.-124    	; 0x3ae <TwoDigits>
+ 42a:	80 91 29 01 	lds	r24, 0x0129	; 0x800129 <CursorPosition>
+	LCDGotoXYNUM(CursorPosition); // Курсор переходит к позиции, которая задана
+ 42e:	cb df       	rcall	.-106    	; 0x3c6 <LCDGotoXYNUM>
+ 430:	80 91 28 01 	lds	r24, 0x0128	; 0x800128 <CursorEnable>
+ 434:	81 30       	cpi	r24, 0x01	; 1
+	if(CursorEnable==1) // Если сейчас режим изменения значений
+ 436:	09 f4       	brne	.+2      	; 0x43a <__LOCK_REGION_LENGTH__+0x3a>
+ 438:	95 df       	rcall	.-214    	; 0x364 <LCDcursor_on>
+ 43a:	78 94       	sei
+ 43c:	df 91       	pop	r29
+		LCDcursor_on(); // То включаем мигающий подчеркивающий курсор
+ 43e:	cf 91       	pop	r28
+ 440:	08 95       	ret
+
+00000442 <Init_MK>:
+	sei(); // Разрешаем прерывания
+ 442:	81 e0       	ldi	r24, 0x01	; 1
+}
+ 444:	87 bb       	out	0x17, r24	; 23
+ 446:	12 b8       	out	0x02, r1	; 2
+ 448:	8f ef       	ldi	r24, 0xFF	; 255
+void Init_MK() 
+// Первоначальная настройка МК
+{
+	DDRB=0b00000001; // Настравиваем 0 пин порта b на выход, остальные на вход
+	DDRE=0x00; // Настраиваем все пины порта E на вход
+	PORTE=0xFF; // Настраиваем все пины порта E на PullUp режим
+ 44a:	83 b9       	out	0x03, r24	; 3
+	EICRB=(1<<ISC71)|(1<<ISC61)|(1<<ISC51)|(1<<ISC41); // Настраиваем внешние прерывания.
+ 44c:	9a ea       	ldi	r25, 0xAA	; 170
+ 44e:	9a bf       	out	0x3a, r25	; 58
+	// Устанавливаем необходимые биты в регистре EICRB для 4 прерываний по заднему фронту (с высокого уровня на низкий)
+	EIMSK=(1<<INTF7)|(1<<INTF6)|(1<<INTF5)|(1<<INTF4); // Разрешаем 4 внешнийх прерывания INT4-INT7.
+ 450:	90 ef       	ldi	r25, 0xF0	; 240
+ 452:	99 bf       	out	0x39, r25	; 57
+	// К данным пинам (PE4-PE7) подключены 4 кнопки, представляющие собой панель управления часами.
+	
+	// Для работы сигнала будильника настраиваем таймер 0
+	TCCR0=(1<<WGM0)|(1<<CS02)|(1<<CS01)|(1<<CS00); // Устанавливаем режим работы CTC (по сравнению) и предделитель 1024
+ 454:	97 e4       	ldi	r25, 0x47	; 71
+ 456:	93 bf       	out	0x33, r25	; 51
+	OCR0=0xff; // Устанавливаем значение значения на сравнение 255
+ 458:	81 bf       	out	0x31, r24	; 49
+	
+	// Для редактирования данных настраиваем таймер 1
+	TCCR1B=(1<<WGM12)|(0<<CS12)|(1<<CS11)|(1<<CS10); // Настраиваем также режим CTC и предделитель 64
+ 45a:	9b e0       	ldi	r25, 0x0B	; 11
+ 45c:	9e bd       	out	0x2e, r25	; 46
+	OCR1AH=0xff; // Устанавливаем максимальное значение на сравнение = 65 535 в 16 разрядный регистр
+ 45e:	8b bd       	out	0x2b, r24	; 43
+	OCR1AL=0xff;
+ 460:	8a bd       	out	0x2a, r24	; 42
+	DS1307_GetRealTime(); // Получаем время с часов
+ 462:	86 df       	rcall	.-244    	; 0x370 <DS1307_GetRealTime>
+	sei(); // Глобально разрешаем прерывания
+ 464:	78 94       	sei
+ 466:	08 95       	ret
+
+00000468 <EditSeconds>:
+}
+
+void EditSeconds(byte *seconds,byte numBut,byte isLow)
+// Метод для редактирования секунд
+{
+ 468:	fc 01       	movw	r30, r24
+	byte high=*seconds>>4; // Получаем старшее значение
+ 46a:	90 81       	ld	r25, Z
+ 46c:	89 2f       	mov	r24, r25
+ 46e:	82 95       	swap	r24
+ 470:	8f 70       	andi	r24, 0x0F	; 15
+	byte low = *seconds & 0b00001111; // И младшее
+ 472:	9f 70       	andi	r25, 0x0F	; 15
+	if(isLow) // Если мы редактируем младший разряд
+ 474:	44 23       	and	r20, r20
+ 476:	61 f0       	breq	.+24     	; 0x490 <EditSeconds+0x28>
+	{
+		if(numBut==UPBUTTON) // Если кнопка вверх
+ 478:	65 30       	cpi	r22, 0x05	; 5
+ 47a:	21 f4       	brne	.+8      	; 0x484 <EditSeconds+0x1c>
+		low=(low==9)?0:low+1; // То если было число 9, ставим 0, иначе увеличиваем на 1
+ 47c:	99 30       	cpi	r25, 0x09	; 9
+ 47e:	e9 f0       	breq	.+58     	; 0x4ba <EditSeconds+0x52>
+ 480:	9f 5f       	subi	r25, 0xFF	; 255
+ 482:	15 c0       	rjmp	.+42     	; 0x4ae <EditSeconds+0x46>
+		if(numBut==DOWNBUTTON) // Если вниз
+ 484:	68 30       	cpi	r22, 0x08	; 8
+ 486:	99 f4       	brne	.+38     	; 0x4ae <EditSeconds+0x46>
+		low=(low==0)?9:low-1; // ТО если был 0, ставим 9, иначе уменьшаем на 1
+ 488:	99 23       	and	r25, r25
+ 48a:	71 f0       	breq	.+28     	; 0x4a8 <EditSeconds+0x40>
+ 48c:	91 50       	subi	r25, 0x01	; 1
+ 48e:	0f c0       	rjmp	.+30     	; 0x4ae <EditSeconds+0x46>
+	}
+	else // Если старший разряд числа
+	{
+		if(numBut==UPBUTTON) // Если вверх
+ 490:	65 30       	cpi	r22, 0x05	; 5
+ 492:	21 f4       	brne	.+8      	; 0x49c <EditSeconds+0x34>
+		high=(high==5)?0:high+1; // то если было 5, ставим 0, иначе +1
+ 494:	85 30       	cpi	r24, 0x05	; 5
+ 496:	99 f0       	breq	.+38     	; 0x4be <EditSeconds+0x56>
+ 498:	8f 5f       	subi	r24, 0xFF	; 255
+ 49a:	09 c0       	rjmp	.+18     	; 0x4ae <EditSeconds+0x46>
+		if(numBut==DOWNBUTTON) // Если вниз
+ 49c:	68 30       	cpi	r22, 0x08	; 8
+ 49e:	39 f4       	brne	.+14     	; 0x4ae <EditSeconds+0x46>
+		high=(high==0)?5:high-1; // То если был 0, ставим 5, иначе -1
+ 4a0:	88 23       	and	r24, r24
+ 4a2:	21 f0       	breq	.+8      	; 0x4ac <EditSeconds+0x44>
+ 4a4:	81 50       	subi	r24, 0x01	; 1
+ 4a6:	03 c0       	rjmp	.+6      	; 0x4ae <EditSeconds+0x46>
+	if(isLow) // Если мы редактируем младший разряд
+	{
+		if(numBut==UPBUTTON) // Если кнопка вверх
+		low=(low==9)?0:low+1; // То если было число 9, ставим 0, иначе увеличиваем на 1
+		if(numBut==DOWNBUTTON) // Если вниз
+		low=(low==0)?9:low-1; // ТО если был 0, ставим 9, иначе уменьшаем на 1
+ 4a8:	99 e0       	ldi	r25, 0x09	; 9
+ 4aa:	01 c0       	rjmp	.+2      	; 0x4ae <EditSeconds+0x46>
+	else // Если старший разряд числа
+	{
+		if(numBut==UPBUTTON) // Если вверх
+		high=(high==5)?0:high+1; // то если было 5, ставим 0, иначе +1
+		if(numBut==DOWNBUTTON) // Если вниз
+		high=(high==0)?5:high-1; // То если был 0, ставим 5, иначе -1
+ 4ac:	85 e0       	ldi	r24, 0x05	; 5
+	}
+	*seconds=(high<<4)+low; // Возвращаем значение секунд, складывая старший разряд (смещённый влево на 4) и младший
+ 4ae:	20 e1       	ldi	r18, 0x10	; 16
+ 4b0:	82 9f       	mul	r24, r18
+ 4b2:	90 0d       	add	r25, r0
+ 4b4:	11 24       	eor	r1, r1
+ 4b6:	90 83       	st	Z, r25
+}
+ 4b8:	08 95       	ret
+	byte high=*seconds>>4; // Получаем старшее значение
+	byte low = *seconds & 0b00001111; // И младшее
+	if(isLow) // Если мы редактируем младший разряд
+	{
+		if(numBut==UPBUTTON) // Если кнопка вверх
+		low=(low==9)?0:low+1; // То если было число 9, ставим 0, иначе увеличиваем на 1
+ 4ba:	90 e0       	ldi	r25, 0x00	; 0
+ 4bc:	f8 cf       	rjmp	.-16     	; 0x4ae <EditSeconds+0x46>
+		low=(low==0)?9:low-1; // ТО если был 0, ставим 9, иначе уменьшаем на 1
+	}
+	else // Если старший разряд числа
+	{
+		if(numBut==UPBUTTON) // Если вверх
+		high=(high==5)?0:high+1; // то если было 5, ставим 0, иначе +1
+ 4be:	80 e0       	ldi	r24, 0x00	; 0
+ 4c0:	f6 cf       	rjmp	.-20     	; 0x4ae <EditSeconds+0x46>
+
+000004c2 <EditMinutes>:
+	*seconds=(high<<4)+low; // Возвращаем значение секунд, складывая старший разряд (смещённый влево на 4) и младший
+}
+
+void EditMinutes(byte *minutes,byte numBut,byte isLow)
+// Метод для редактирования секунд
+{
+ 4c2:	fc 01       	movw	r30, r24
+	// Всё аналогично методу для редактирования секунд
+	byte high=*minutes>>4;
+ 4c4:	90 81       	ld	r25, Z
+ 4c6:	89 2f       	mov	r24, r25
+ 4c8:	82 95       	swap	r24
+ 4ca:	8f 70       	andi	r24, 0x0F	; 15
+	byte low = *minutes & 0b00001111;
+ 4cc:	9f 70       	andi	r25, 0x0F	; 15
+	if(isLow)
+ 4ce:	44 23       	and	r20, r20
+ 4d0:	61 f0       	breq	.+24     	; 0x4ea <EditMinutes+0x28>
+	{
+		if(numBut==UPBUTTON)
+ 4d2:	65 30       	cpi	r22, 0x05	; 5
+ 4d4:	21 f4       	brne	.+8      	; 0x4de <EditMinutes+0x1c>
+		low=(low==9)?0:low+1;
+ 4d6:	99 30       	cpi	r25, 0x09	; 9
+ 4d8:	e9 f0       	breq	.+58     	; 0x514 <EditMinutes+0x52>
+ 4da:	9f 5f       	subi	r25, 0xFF	; 255
+ 4dc:	15 c0       	rjmp	.+42     	; 0x508 <EditMinutes+0x46>
+		if(numBut==DOWNBUTTON)
+ 4de:	68 30       	cpi	r22, 0x08	; 8
+ 4e0:	99 f4       	brne	.+38     	; 0x508 <EditMinutes+0x46>
+		low=(low==0)?9:low-1;
+ 4e2:	99 23       	and	r25, r25
+ 4e4:	71 f0       	breq	.+28     	; 0x502 <EditMinutes+0x40>
+ 4e6:	91 50       	subi	r25, 0x01	; 1
+ 4e8:	0f c0       	rjmp	.+30     	; 0x508 <EditMinutes+0x46>
+	}
+	else
+	{
+		if(numBut==UPBUTTON)
+ 4ea:	65 30       	cpi	r22, 0x05	; 5
+ 4ec:	21 f4       	brne	.+8      	; 0x4f6 <EditMinutes+0x34>
+		high=(high==5)?0:high+1;
+ 4ee:	85 30       	cpi	r24, 0x05	; 5
+ 4f0:	99 f0       	breq	.+38     	; 0x518 <EditMinutes+0x56>
+ 4f2:	8f 5f       	subi	r24, 0xFF	; 255
+ 4f4:	09 c0       	rjmp	.+18     	; 0x508 <EditMinutes+0x46>
+		if(numBut==DOWNBUTTON)
+ 4f6:	68 30       	cpi	r22, 0x08	; 8
+ 4f8:	39 f4       	brne	.+14     	; 0x508 <EditMinutes+0x46>
+		high=(high==0)?5:high-1;
+ 4fa:	88 23       	and	r24, r24
+ 4fc:	21 f0       	breq	.+8      	; 0x506 <EditMinutes+0x44>
+ 4fe:	81 50       	subi	r24, 0x01	; 1
+ 500:	03 c0       	rjmp	.+6      	; 0x508 <EditMinutes+0x46>
+	if(isLow)
+	{
+		if(numBut==UPBUTTON)
+		low=(low==9)?0:low+1;
+		if(numBut==DOWNBUTTON)
+		low=(low==0)?9:low-1;
+ 502:	99 e0       	ldi	r25, 0x09	; 9
+ 504:	01 c0       	rjmp	.+2      	; 0x508 <EditMinutes+0x46>
+	else
+	{
+		if(numBut==UPBUTTON)
+		high=(high==5)?0:high+1;
+		if(numBut==DOWNBUTTON)
+		high=(high==0)?5:high-1;
+ 506:	85 e0       	ldi	r24, 0x05	; 5
+	}
+	*minutes=(high<<4)+low;
+ 508:	20 e1       	ldi	r18, 0x10	; 16
+ 50a:	82 9f       	mul	r24, r18
+ 50c:	90 0d       	add	r25, r0
+ 50e:	11 24       	eor	r1, r1
+ 510:	90 83       	st	Z, r25
+}
+ 512:	08 95       	ret
+	byte high=*minutes>>4;
+	byte low = *minutes & 0b00001111;
+	if(isLow)
+	{
+		if(numBut==UPBUTTON)
+		low=(low==9)?0:low+1;
+ 514:	90 e0       	ldi	r25, 0x00	; 0
+ 516:	f8 cf       	rjmp	.-16     	; 0x508 <EditMinutes+0x46>
+		low=(low==0)?9:low-1;
+	}
+	else
+	{
+		if(numBut==UPBUTTON)
+		high=(high==5)?0:high+1;
+ 518:	80 e0       	ldi	r24, 0x00	; 0
+ 51a:	f6 cf       	rjmp	.-20     	; 0x508 <EditMinutes+0x46>
+
+0000051c <EditHour>:
+	*minutes=(high<<4)+low;
+}
+
+void EditHour(byte *hours,byte numBut, byte isLow)
+// Метод для редактирования часов
+{
+ 51c:	fc 01       	movw	r30, r24
+	byte high=*hours>>4; // Старший разряд
+ 51e:	90 81       	ld	r25, Z
+ 520:	29 2f       	mov	r18, r25
+ 522:	22 95       	swap	r18
+ 524:	2f 70       	andi	r18, 0x0F	; 15
+	byte low = *hours & 0b00001111; // Младший
+ 526:	9f 70       	andi	r25, 0x0F	; 15
+	if(isLow) // Если редактируем младший
+ 528:	44 23       	and	r20, r20
+ 52a:	d1 f0       	breq	.+52     	; 0x560 <EditHour+0x44>
+	{
+		if(high==2) // Если старший разряд = 2
+ 52c:	22 30       	cpi	r18, 0x02	; 2
+ 52e:	61 f4       	brne	.+24     	; 0x548 <EditHour+0x2c>
+		{
+			if(numBut==UPBUTTON) // Если нажата вверх
+ 530:	65 30       	cpi	r22, 0x05	; 5
+ 532:	21 f4       	brne	.+8      	; 0x53c <EditHour+0x20>
+			low=(low==3)?0:low+1; // То если младший = 3, ставим 0, иначе +1
+ 534:	93 30       	cpi	r25, 0x03	; 3
+ 536:	a9 f1       	breq	.+106    	; 0x5a2 <EditHour+0x86>
+ 538:	9f 5f       	subi	r25, 0xFF	; 255
+ 53a:	2d c0       	rjmp	.+90     	; 0x596 <EditHour+0x7a>
+			if(numBut==DOWNBUTTON) // Если вниз
+ 53c:	68 30       	cpi	r22, 0x08	; 8
+ 53e:	59 f5       	brne	.+86     	; 0x596 <EditHour+0x7a>
+			low=(low==0)?3:low-1; // То если младший = 0, ставим 3, иначе -1
+ 540:	99 23       	and	r25, r25
+ 542:	31 f1       	breq	.+76     	; 0x590 <EditHour+0x74>
+ 544:	91 50       	subi	r25, 0x01	; 1
+ 546:	27 c0       	rjmp	.+78     	; 0x596 <EditHour+0x7a>
+		}
+		else // Если старший не 2
+		{
+			if(numBut==UPBUTTON) // Если вверх
+ 548:	65 30       	cpi	r22, 0x05	; 5
+ 54a:	21 f4       	brne	.+8      	; 0x554 <EditHour+0x38>
+			low=(low==9)?0:low+1; // Если младший = 9, то ставим 0, иначе +1
+ 54c:	99 30       	cpi	r25, 0x09	; 9
+ 54e:	59 f1       	breq	.+86     	; 0x5a6 <EditHour+0x8a>
+ 550:	9f 5f       	subi	r25, 0xFF	; 255
+ 552:	21 c0       	rjmp	.+66     	; 0x596 <EditHour+0x7a>
+			if(numBut==DOWNBUTTON) // Если вниз
+ 554:	68 30       	cpi	r22, 0x08	; 8
+ 556:	f9 f4       	brne	.+62     	; 0x596 <EditHour+0x7a>
+			low=(low==0)?9:low-1; // То если младший 0, ставим 9, иначе -1
+ 558:	99 23       	and	r25, r25
+ 55a:	e1 f0       	breq	.+56     	; 0x594 <EditHour+0x78>
+ 55c:	91 50       	subi	r25, 0x01	; 1
+ 55e:	1b c0       	rjmp	.+54     	; 0x596 <EditHour+0x7a>
+		}
+	}
+	else // Если же редактируем старший
+	{
+		if(numBut==UPBUTTON) // Если вверх
+ 560:	65 30       	cpi	r22, 0x05	; 5
+ 562:	59 f4       	brne	.+22     	; 0x57a <EditHour+0x5e>
+		{
+			if(high==1) // Если старший разряд = 1
+ 564:	21 30       	cpi	r18, 0x01	; 1
+ 566:	29 f4       	brne	.+10     	; 0x572 <EditHour+0x56>
+			{
+				high=2; // ставим 2
+				low=(low>3)?3:low; // Есл младший был > 3, то ставим 3, иначе сотавляем как было 
+ 568:	94 30       	cpi	r25, 0x04	; 4
+ 56a:	08 f0       	brcs	.+2      	; 0x56e <EditHour+0x52>
+ 56c:	93 e0       	ldi	r25, 0x03	; 3
+	{
+		if(numBut==UPBUTTON) // Если вверх
+		{
+			if(high==1) // Если старший разряд = 1
+			{
+				high=2; // ставим 2
+ 56e:	22 e0       	ldi	r18, 0x02	; 2
+ 570:	12 c0       	rjmp	.+36     	; 0x596 <EditHour+0x7a>
+				low=(low>3)?3:low; // Есл младший был > 3, то ставим 3, иначе сотавляем как было 
+				// (тк в часах не может отображаться больше 23)
+			}
+			else if(high==2) // Если же старший разряд 2
+ 572:	22 30       	cpi	r18, 0x02	; 2
+ 574:	d1 f0       	breq	.+52     	; 0x5aa <EditHour+0x8e>
+			high=0; // То ставим 0
+			else // Иначе увеличим на 1
+			high++;
+ 576:	2f 5f       	subi	r18, 0xFF	; 255
+ 578:	0e c0       	rjmp	.+28     	; 0x596 <EditHour+0x7a>
+			
+		}
+		if(numBut==DOWNBUTTON) // Если вниз
+ 57a:	68 30       	cpi	r22, 0x08	; 8
+ 57c:	61 f4       	brne	.+24     	; 0x596 <EditHour+0x7a>
+		{
+			if(high==0) // Если 0
+ 57e:	21 11       	cpse	r18, r1
+ 580:	05 c0       	rjmp	.+10     	; 0x58c <EditHour+0x70>
+			{
+				high=2; // Ставим 2
+				low=(low>3)?3:low; // Если младший > 3, то ставим 3, иначе оставляем
+ 582:	94 30       	cpi	r25, 0x04	; 4
+ 584:	08 f0       	brcs	.+2      	; 0x588 <EditHour+0x6c>
+ 586:	93 e0       	ldi	r25, 0x03	; 3
+		}
+		if(numBut==DOWNBUTTON) // Если вниз
+		{
+			if(high==0) // Если 0
+			{
+				high=2; // Ставим 2
+ 588:	22 e0       	ldi	r18, 0x02	; 2
+ 58a:	05 c0       	rjmp	.+10     	; 0x596 <EditHour+0x7a>
+				low=(low>3)?3:low; // Если младший > 3, то ставим 3, иначе оставляем
+			}
+			else if(high==0) // Если был 0
+			high=2; // Устанавливаем 2
+			else // Иначе просто уменьшаем
+			high--;
+ 58c:	21 50       	subi	r18, 0x01	; 1
+ 58e:	03 c0       	rjmp	.+6      	; 0x596 <EditHour+0x7a>
+		if(high==2) // Если старший разряд = 2
+		{
+			if(numBut==UPBUTTON) // Если нажата вверх
+			low=(low==3)?0:low+1; // То если младший = 3, ставим 0, иначе +1
+			if(numBut==DOWNBUTTON) // Если вниз
+			low=(low==0)?3:low-1; // То если младший = 0, ставим 3, иначе -1
+ 590:	93 e0       	ldi	r25, 0x03	; 3
+ 592:	01 c0       	rjmp	.+2      	; 0x596 <EditHour+0x7a>
+		else // Если старший не 2
+		{
+			if(numBut==UPBUTTON) // Если вверх
+			low=(low==9)?0:low+1; // Если младший = 9, то ставим 0, иначе +1
+			if(numBut==DOWNBUTTON) // Если вниз
+			low=(low==0)?9:low-1; // То если младший 0, ставим 9, иначе -1
+ 594:	99 e0       	ldi	r25, 0x09	; 9
+			high=2; // Устанавливаем 2
+			else // Иначе просто уменьшаем
+			high--;
+		}
+	}
+	*hours=(high<<4)+low; // Возвращаем часы, состоящие из старшего и младшего разряда
+ 596:	80 e1       	ldi	r24, 0x10	; 16
+ 598:	28 9f       	mul	r18, r24
+ 59a:	90 0d       	add	r25, r0
+ 59c:	11 24       	eor	r1, r1
+ 59e:	90 83       	st	Z, r25
+}
+ 5a0:	08 95       	ret
+	if(isLow) // Если редактируем младший
+	{
+		if(high==2) // Если старший разряд = 2
+		{
+			if(numBut==UPBUTTON) // Если нажата вверх
+			low=(low==3)?0:low+1; // То если младший = 3, ставим 0, иначе +1
+ 5a2:	90 e0       	ldi	r25, 0x00	; 0
+ 5a4:	f8 cf       	rjmp	.-16     	; 0x596 <EditHour+0x7a>
+			low=(low==0)?3:low-1; // То если младший = 0, ставим 3, иначе -1
+		}
+		else // Если старший не 2
+		{
+			if(numBut==UPBUTTON) // Если вверх
+			low=(low==9)?0:low+1; // Если младший = 9, то ставим 0, иначе +1
+ 5a6:	90 e0       	ldi	r25, 0x00	; 0
+ 5a8:	f6 cf       	rjmp	.-20     	; 0x596 <EditHour+0x7a>
+				high=2; // ставим 2
+				low=(low>3)?3:low; // Есл младший был > 3, то ставим 3, иначе сотавляем как было 
+				// (тк в часах не может отображаться больше 23)
+			}
+			else if(high==2) // Если же старший разряд 2
+			high=0; // То ставим 0
+ 5aa:	20 e0       	ldi	r18, 0x00	; 0
+ 5ac:	f4 cf       	rjmp	.-24     	; 0x596 <EditHour+0x7a>
+
+000005ae <Redact>:
+	*hours=(high<<4)+low; // Возвращаем часы, состоящие из старшего и младшего разряда
+}
+void Redact(byte numBut, byte position)
+// Метод редактирования выбранного элемента
+{
+	switch(position)
+ 5ae:	46 2f       	mov	r20, r22
+ 5b0:	50 e0       	ldi	r21, 0x00	; 0
+ 5b2:	4c 30       	cpi	r20, 0x0C	; 12
+ 5b4:	51 05       	cpc	r21, r1
+ 5b6:	08 f0       	brcs	.+2      	; 0x5ba <Redact+0xc>
+ 5b8:	4b c0       	rjmp	.+150    	; 0x650 <Redact+0xa2>
+ 5ba:	fa 01       	movw	r30, r20
+ 5bc:	ea 5b       	subi	r30, 0xBA	; 186
+ 5be:	ff 4f       	sbci	r31, 0xFF	; 255
+ 5c0:	cc c1       	rjmp	.+920    	; 0x95a <__tablejump2__>
+	// Проверяем, какой элемент редактируем
+	{		
+		case 0:
+			EditHour(&timeVar.realHours,numBut,!ISLOW); // Старший разряд часов
+ 5c2:	40 e0       	ldi	r20, 0x00	; 0
+ 5c4:	68 2f       	mov	r22, r24
+ 5c6:	8a e2       	ldi	r24, 0x2A	; 42
+ 5c8:	91 e0       	ldi	r25, 0x01	; 1
+ 5ca:	a8 df       	rcall	.-176    	; 0x51c <EditHour>
+		break;
+ 5cc:	41 c0       	rjmp	.+130    	; 0x650 <Redact+0xa2>
+		case 1:
+			EditHour(&timeVar.realHours,numBut,ISLOW); // Младший разряд часов
+ 5ce:	41 e0       	ldi	r20, 0x01	; 1
+ 5d0:	68 2f       	mov	r22, r24
+ 5d2:	8a e2       	ldi	r24, 0x2A	; 42
+ 5d4:	91 e0       	ldi	r25, 0x01	; 1
+ 5d6:	a2 df       	rcall	.-188    	; 0x51c <EditHour>
+		break;
+ 5d8:	3b c0       	rjmp	.+118    	; 0x650 <Redact+0xa2>
+		case 2:
+			EditMinutes(&timeVar.realMinutes,numBut,!ISLOW); // Аналогично с минутами
+ 5da:	40 e0       	ldi	r20, 0x00	; 0
+ 5dc:	68 2f       	mov	r22, r24
+ 5de:	8b e2       	ldi	r24, 0x2B	; 43
+ 5e0:	91 e0       	ldi	r25, 0x01	; 1
+ 5e2:	6f df       	rcall	.-290    	; 0x4c2 <EditMinutes>
+		break;
+ 5e4:	35 c0       	rjmp	.+106    	; 0x650 <Redact+0xa2>
+		case 3:
+			EditMinutes(&timeVar.realMinutes,numBut,ISLOW);
+ 5e6:	41 e0       	ldi	r20, 0x01	; 1
+ 5e8:	68 2f       	mov	r22, r24
+ 5ea:	8b e2       	ldi	r24, 0x2B	; 43
+ 5ec:	91 e0       	ldi	r25, 0x01	; 1
+ 5ee:	69 df       	rcall	.-302    	; 0x4c2 <EditMinutes>
+		break;
+		case 4:
+			EditSeconds(&timeVar.realSeconds,numBut,!ISLOW); // И с секундами
+ 5f0:	2f c0       	rjmp	.+94     	; 0x650 <Redact+0xa2>
+ 5f2:	40 e0       	ldi	r20, 0x00	; 0
+ 5f4:	68 2f       	mov	r22, r24
+ 5f6:	8c e2       	ldi	r24, 0x2C	; 44
+ 5f8:	91 e0       	ldi	r25, 0x01	; 1
+		break;
+ 5fa:	36 df       	rcall	.-404    	; 0x468 <EditSeconds>
+		case 5:
+			EditSeconds(&timeVar.realSeconds,numBut,ISLOW);
+ 5fc:	29 c0       	rjmp	.+82     	; 0x650 <Redact+0xa2>
+ 5fe:	41 e0       	ldi	r20, 0x01	; 1
+ 600:	68 2f       	mov	r22, r24
+ 602:	8c e2       	ldi	r24, 0x2C	; 44
+ 604:	91 e0       	ldi	r25, 0x01	; 1
+		break;
+ 606:	30 df       	rcall	.-416    	; 0x468 <EditSeconds>
+		case 6:
+			EditHour(&timeVar.alarmHours,numBut,!ISLOW); // Далее редактируем время будильника аналогично
+ 608:	23 c0       	rjmp	.+70     	; 0x650 <Redact+0xa2>
+ 60a:	40 e0       	ldi	r20, 0x00	; 0
+ 60c:	68 2f       	mov	r22, r24
+ 60e:	8d e2       	ldi	r24, 0x2D	; 45
+ 610:	91 e0       	ldi	r25, 0x01	; 1
+		break;
+ 612:	84 df       	rcall	.-248    	; 0x51c <EditHour>
+		case 7:
+			EditHour(&timeVar.alarmHours,numBut,ISLOW);
+ 614:	1d c0       	rjmp	.+58     	; 0x650 <Redact+0xa2>
+ 616:	41 e0       	ldi	r20, 0x01	; 1
+ 618:	68 2f       	mov	r22, r24
+ 61a:	8d e2       	ldi	r24, 0x2D	; 45
+ 61c:	91 e0       	ldi	r25, 0x01	; 1
+		break;
+ 61e:	7e df       	rcall	.-260    	; 0x51c <EditHour>
+		case 8:
+			EditMinutes(&timeVar.alarmMinutes,numBut,!ISLOW);
+ 620:	17 c0       	rjmp	.+46     	; 0x650 <Redact+0xa2>
+ 622:	40 e0       	ldi	r20, 0x00	; 0
+ 624:	68 2f       	mov	r22, r24
+ 626:	8e e2       	ldi	r24, 0x2E	; 46
+ 628:	91 e0       	ldi	r25, 0x01	; 1
+		break;
+ 62a:	4b df       	rcall	.-362    	; 0x4c2 <EditMinutes>
+		case 9:
+			EditMinutes(&timeVar.alarmMinutes,numBut,ISLOW);
+ 62c:	11 c0       	rjmp	.+34     	; 0x650 <Redact+0xa2>
+ 62e:	41 e0       	ldi	r20, 0x01	; 1
+ 630:	68 2f       	mov	r22, r24
+ 632:	8e e2       	ldi	r24, 0x2E	; 46
+ 634:	91 e0       	ldi	r25, 0x01	; 1
+		break;
+		case 10:
+			EditSeconds(&timeVar.alarmSeconds,numBut,!ISLOW);
+ 636:	45 df       	rcall	.-374    	; 0x4c2 <EditMinutes>
+ 638:	0b c0       	rjmp	.+22     	; 0x650 <Redact+0xa2>
+ 63a:	40 e0       	ldi	r20, 0x00	; 0
+ 63c:	68 2f       	mov	r22, r24
+ 63e:	8f e2       	ldi	r24, 0x2F	; 47
+		break;
+ 640:	91 e0       	ldi	r25, 0x01	; 1
+		case 11:
+			EditSeconds(&timeVar.alarmSeconds,numBut,ISLOW);
+ 642:	12 df       	rcall	.-476    	; 0x468 <EditSeconds>
+ 644:	05 c0       	rjmp	.+10     	; 0x650 <Redact+0xa2>
+ 646:	41 e0       	ldi	r20, 0x01	; 1
+ 648:	68 2f       	mov	r22, r24
+ 64a:	8f e2       	ldi	r24, 0x2F	; 47
+ 64c:	91 e0       	ldi	r25, 0x01	; 1
+		break;
+	}
+	DS1307_SetTime(); // Записываем отредактированное время в часы
+ 64e:	0c df       	rcall	.-488    	; 0x468 <EditSeconds>
+ 650:	99 ce       	rjmp	.-718    	; 0x384 <DS1307_SetTime>
+ 652:	08 95       	ret
+
+00000654 <PressButton>:
+}
+
+void PressButton(byte NumButton)
+// Метод, описывающий действия при нажатии на клавишу
+{
+	cli(); // Запрещаем прерывания
+ 654:	f8 94       	cli
+	TCNT1H=0x00; // Сбрасываем значения таймера 1 для продолжения режима редактирования
+ 656:	1d bc       	out	0x2d, r1	; 45
+	TCNT1L=0x00;
+ 658:	1c bc       	out	0x2c, r1	; 44
+	TIMSK=(0<<OCIE0); // Выключаем таймер 0 (Сигнал будильника при нажатии на любую кнопку)
+ 65a:	17 be       	out	0x37, r1	; 55
+	sei(); // Разрешаем прерывания
+ 65c:	78 94       	sei
+	if(CursorEnable==0) // Если ещё не был включён режим редактирования
+ 65e:	90 91 28 01 	lds	r25, 0x0128	; 0x800128 <CursorEnable>
+ 662:	91 11       	cpse	r25, r1
+ 664:	0d c0       	rjmp	.+26     	; 0x680 <PressButton+0x2c>
+	{
+		CursorEnable=1; // То включаем его
+ 666:	81 e0       	ldi	r24, 0x01	; 1
+ 668:	80 93 28 01 	sts	0x0128, r24	; 0x800128 <CursorEnable>
+		CursorPosition=0; // Устанавливаем позицию 0
+ 66c:	10 92 29 01 	sts	0x0129, r1	; 0x800129 <CursorPosition>
+		cli();
+ 670:	f8 94       	cli
+		TIMSK=(1<<OCIE1A); // Включаем таймер времени режима редактирования
+ 672:	80 e1       	ldi	r24, 0x10	; 16
+ 674:	87 bf       	out	0x37, r24	; 55
+		sei();
+ 676:	78 94       	sei
+		LCDGotoXYNUM(CursorPosition); // Переводим курсор в нужную позицию 
+ 678:	80 91 29 01 	lds	r24, 0x0129	; 0x800129 <CursorPosition>
+ 67c:	a4 ce       	rjmp	.-696    	; 0x3c6 <LCDGotoXYNUM>
+ 67e:	08 95       	ret
+	}
+	else // Если был ключён
+	{
+		switch(NumButton)
+ 680:	86 30       	cpi	r24, 0x06	; 6
+ 682:	71 f0       	breq	.+28     	; 0x6a0 <PressButton+0x4c>
+ 684:	18 f4       	brcc	.+6      	; 0x68c <PressButton+0x38>
+ 686:	85 30       	cpi	r24, 0x05	; 5
+ 688:	31 f0       	breq	.+12     	; 0x696 <PressButton+0x42>
+ 68a:	08 95       	ret
+ 68c:	87 30       	cpi	r24, 0x07	; 7
+ 68e:	b1 f0       	breq	.+44     	; 0x6bc <PressButton+0x68>
+ 690:	88 30       	cpi	r24, 0x08	; 8
+ 692:	19 f1       	breq	.+70     	; 0x6da <PressButton+0x86>
+ 694:	08 95       	ret
+		// То в зависимости от нажатой кнопки вызываем разные команды
+		{
+			// Кнопка вверх
+			case UPBUTTON:
+				Redact(UPBUTTON,CursorPosition); // Редактирование при нажатии кнопки вверх
+ 696:	60 91 29 01 	lds	r22, 0x0129	; 0x800129 <CursorPosition>
+ 69a:	85 e0       	ldi	r24, 0x05	; 5
+ 69c:	88 cf       	rjmp	.-240    	; 0x5ae <Redact>
+			break;
+ 69e:	08 95       	ret
+			case RIGHTBUTTON: // Если вправо
+				if(CursorPosition==11) // Если позиция крайняя, то переходим в 0
+ 6a0:	80 91 29 01 	lds	r24, 0x0129	; 0x800129 <CursorPosition>
+ 6a4:	8b 30       	cpi	r24, 0x0B	; 11
+ 6a6:	19 f4       	brne	.+6      	; 0x6ae <PressButton+0x5a>
+					CursorPosition=0;
+ 6a8:	10 92 29 01 	sts	0x0129, r1	; 0x800129 <CursorPosition>
+ 6ac:	03 c0       	rjmp	.+6      	; 0x6b4 <PressButton+0x60>
+				else
+					CursorPosition++; // Иначе увеличиваем на 1
+ 6ae:	8f 5f       	subi	r24, 0xFF	; 255
+ 6b0:	80 93 29 01 	sts	0x0129, r24	; 0x800129 <CursorPosition>
+				LCDGotoXYNUM(CursorPosition); // Переносим курсор
+ 6b4:	80 91 29 01 	lds	r24, 0x0129	; 0x800129 <CursorPosition>
+ 6b8:	86 ce       	rjmp	.-756    	; 0x3c6 <LCDGotoXYNUM>
+			break;
+ 6ba:	08 95       	ret
+			case LEFTBUTTON: // Если влево
+				if(CursorPosition==0) // Если 0, то позиция 11
+ 6bc:	80 91 29 01 	lds	r24, 0x0129	; 0x800129 <CursorPosition>
+ 6c0:	81 11       	cpse	r24, r1
+ 6c2:	04 c0       	rjmp	.+8      	; 0x6cc <PressButton+0x78>
+					CursorPosition=11;
+ 6c4:	8b e0       	ldi	r24, 0x0B	; 11
+ 6c6:	80 93 29 01 	sts	0x0129, r24	; 0x800129 <CursorPosition>
+ 6ca:	03 c0       	rjmp	.+6      	; 0x6d2 <PressButton+0x7e>
+				else
+					CursorPosition--; // Иначе -1
+ 6cc:	81 50       	subi	r24, 0x01	; 1
+ 6ce:	80 93 29 01 	sts	0x0129, r24	; 0x800129 <CursorPosition>
+				LCDGotoXYNUM(CursorPosition); //Переносим курсор
+ 6d2:	80 91 29 01 	lds	r24, 0x0129	; 0x800129 <CursorPosition>
+ 6d6:	77 ce       	rjmp	.-786    	; 0x3c6 <LCDGotoXYNUM>
+			break;
+			case DOWNBUTTON: // Если вниз
+				Redact(DOWNBUTTON,CursorPosition); // То уменьшаем значение
+ 6d8:	08 95       	ret
+ 6da:	60 91 29 01 	lds	r22, 0x0129	; 0x800129 <CursorPosition>
+ 6de:	88 e0       	ldi	r24, 0x08	; 8
+ 6e0:	66 cf       	rjmp	.-308    	; 0x5ae <Redact>
+ 6e2:	08 95       	ret
+
+000006e4 <__vector_12>:
+
+ISR(TIMER1_COMPA_vect)
+// Прерывание по сравнению таймера 1
+// Означает, что не было нажатий на кнопки в течение ~3с,
+// и режим редактирования выключается
+{
+ 6e4:	1f 92       	push	r1
+ 6e6:	0f 92       	push	r0
+ 6e8:	0f b6       	in	r0, 0x3f	; 63
+ 6ea:	0f 92       	push	r0
+ 6ec:	11 24       	eor	r1, r1
+ 6ee:	0b b6       	in	r0, 0x3b	; 59
+ 6f0:	0f 92       	push	r0
+ 6f2:	2f 93       	push	r18
+ 6f4:	3f 93       	push	r19
+ 6f6:	4f 93       	push	r20
+ 6f8:	5f 93       	push	r21
+ 6fa:	6f 93       	push	r22
+ 6fc:	7f 93       	push	r23
+ 6fe:	8f 93       	push	r24
+ 700:	9f 93       	push	r25
+ 702:	af 93       	push	r26
+ 704:	bf 93       	push	r27
+ 706:	ef 93       	push	r30
+ 708:	ff 93       	push	r31
+	CursorEnable=0; // Выключаем режим редактирования
+ 70a:	10 92 28 01 	sts	0x0128, r1	; 0x800128 <CursorEnable>
+	LCDcursorOFF(); // Выключаем курсор
+ 70e:	2d de       	rcall	.-934    	; 0x36a <LCDcursorOFF>
+	TIMSK=(0<<OCIE1A); // Выключаем таймер 1
+ 710:	17 be       	out	0x37, r1	; 55
+}
+ 712:	ff 91       	pop	r31
+ 714:	ef 91       	pop	r30
+ 716:	bf 91       	pop	r27
+ 718:	af 91       	pop	r26
+ 71a:	9f 91       	pop	r25
+ 71c:	8f 91       	pop	r24
+ 71e:	7f 91       	pop	r23
+ 720:	6f 91       	pop	r22
+ 722:	5f 91       	pop	r21
+ 724:	4f 91       	pop	r20
+ 726:	3f 91       	pop	r19
+ 728:	2f 91       	pop	r18
+ 72a:	0f 90       	pop	r0
+ 72c:	0b be       	out	0x3b, r0	; 59
+ 72e:	0f 90       	pop	r0
+ 730:	0f be       	out	0x3f, r0	; 63
+ 732:	0f 90       	pop	r0
+ 734:	1f 90       	pop	r1
+ 736:	18 95       	reti
+
+00000738 <__vector_15>:
+
+ISR(TIMER0_COMP_vect)
+// Прерывание по сравнению таймера 0.
+// Используется для создания переодических звковых сигналов
+// и мигания экраном при срабатывании будльника
+{
+ 738:	1f 92       	push	r1
+ 73a:	0f 92       	push	r0
+ 73c:	0f b6       	in	r0, 0x3f	; 63
+ 73e:	0f 92       	push	r0
+ 740:	11 24       	eor	r1, r1
+ 742:	0b b6       	in	r0, 0x3b	; 59
+ 744:	0f 92       	push	r0
+ 746:	2f 93       	push	r18
+ 748:	3f 93       	push	r19
+ 74a:	4f 93       	push	r20
+ 74c:	5f 93       	push	r21
+ 74e:	6f 93       	push	r22
+ 750:	7f 93       	push	r23
+ 752:	8f 93       	push	r24
+ 754:	9f 93       	push	r25
+ 756:	af 93       	push	r26
+ 758:	bf 93       	push	r27
+ 75a:	ef 93       	push	r30
+ 75c:	ff 93       	push	r31
+	beep++; // Увеличиваем количество срабатываний таймера
+ 75e:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <__data_end>
+ 762:	90 91 27 01 	lds	r25, 0x0127	; 0x800127 <__data_end+0x1>
+ 766:	01 96       	adiw	r24, 0x01	; 1
+ 768:	90 93 27 01 	sts	0x0127, r25	; 0x800127 <__data_end+0x1>
+ 76c:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <__data_end>
+	if(beep%2==0) // Через раз выключаем
+ 770:	80 fd       	sbrc	r24, 0
+ 772:	02 c0       	rjmp	.+4      	; 0x778 <__vector_15+0x40>
+		LCDblank();
+ 774:	f1 dd       	rcall	.-1054   	; 0x358 <LCDblank>
+ 776:	12 c0       	rjmp	.+36     	; 0x79c <__vector_15+0x64>
+	else // Или включаем экран
+		LCDnblank();
+ 778:	f2 dd       	rcall	.-1052   	; 0x35e <LCDnblank>
+ 77a:	10 c0       	rjmp	.+32     	; 0x79c <__vector_15+0x64>
+ 77c:	80 fd       	sbrc	r24, 0
+	for(int i=0;i<10;i++) // Даллее с помощью цикла и задержек генерируем звуковой
+	// сигнал большой частоты, чтобы был слышен писк (~6,66 кГц)
+	{
+		if(i%2==0)
+ 77e:	02 c0       	rjmp	.+4      	; 0x784 <__vector_15+0x4c>
+ 780:	28 bb       	out	0x18, r18	; 24
+			PORTB=0b0000001; // Через раз выдаём на динамик 1
+ 782:	01 c0       	rjmp	.+2      	; 0x786 <__vector_15+0x4e>
+ 784:	18 ba       	out	0x18, r1	; 24
+		else // или 0
+			PORTB=0;
+ 786:	e7 e5       	ldi	r30, 0x57	; 87
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 788:	f2 e0       	ldi	r31, 0x02	; 2
+ 78a:	31 97       	sbiw	r30, 0x01	; 1
+ 78c:	f1 f7       	brne	.-4      	; 0x78a <__vector_15+0x52>
+ 78e:	00 c0       	rjmp	.+0      	; 0x790 <__vector_15+0x58>
+ 790:	00 00       	nop
+ 792:	01 96       	adiw	r24, 0x01	; 1
+	beep++; // Увеличиваем количество срабатываний таймера
+	if(beep%2==0) // Через раз выключаем
+		LCDblank();
+	else // Или включаем экран
+		LCDnblank();
+	for(int i=0;i<10;i++) // Даллее с помощью цикла и задержек генерируем звуковой
+ 794:	8a 30       	cpi	r24, 0x0A	; 10
+ 796:	91 05       	cpc	r25, r1
+ 798:	89 f7       	brne	.-30     	; 0x77c <__vector_15+0x44>
+ 79a:	04 c0       	rjmp	.+8      	; 0x7a4 <__vector_15+0x6c>
+ 79c:	80 e0       	ldi	r24, 0x00	; 0
+
+ISR(TIMER0_COMP_vect)
+// Прерывание по сравнению таймера 0.
+// Используется для создания переодических звковых сигналов
+// и мигания экраном при срабатывании будльника
+{
+ 79e:	90 e0       	ldi	r25, 0x00	; 0
+ 7a0:	21 e0       	ldi	r18, 0x01	; 1
+		LCDnblank();
+	for(int i=0;i<10;i++) // Даллее с помощью цикла и задержек генерируем звуковой
+	// сигнал большой частоты, чтобы был слышен писк (~6,66 кГц)
+	{
+		if(i%2==0)
+			PORTB=0b0000001; // Через раз выдаём на динамик 1
+ 7a2:	ec cf       	rjmp	.-40     	; 0x77c <__vector_15+0x44>
+ 7a4:	ff 91       	pop	r31
+		else // или 0
+			PORTB=0;
+		_delay_us(150); // И делаем задержку 150 мкс
+	}
+}
+ 7a6:	ef 91       	pop	r30
+ 7a8:	bf 91       	pop	r27
+ 7aa:	af 91       	pop	r26
+ 7ac:	9f 91       	pop	r25
+ 7ae:	8f 91       	pop	r24
+ 7b0:	7f 91       	pop	r23
+ 7b2:	6f 91       	pop	r22
+ 7b4:	5f 91       	pop	r21
+ 7b6:	4f 91       	pop	r20
+ 7b8:	3f 91       	pop	r19
+ 7ba:	2f 91       	pop	r18
+ 7bc:	0f 90       	pop	r0
+ 7be:	0b be       	out	0x3b, r0	; 59
+ 7c0:	0f 90       	pop	r0
+ 7c2:	0f be       	out	0x3f, r0	; 63
+ 7c4:	0f 90       	pop	r0
+ 7c6:	1f 90       	pop	r1
+ 7c8:	18 95       	reti
+
+000007ca <__vector_5>:
+ 7ca:	1f 92       	push	r1
+
+ISR(INT4_vect)
+//Прерывание по нажатию кнопки вверх
+{
+ 7cc:	0f 92       	push	r0
+ 7ce:	0f b6       	in	r0, 0x3f	; 63
+ 7d0:	0f 92       	push	r0
+ 7d2:	11 24       	eor	r1, r1
+ 7d4:	0b b6       	in	r0, 0x3b	; 59
+ 7d6:	0f 92       	push	r0
+ 7d8:	2f 93       	push	r18
+ 7da:	3f 93       	push	r19
+ 7dc:	4f 93       	push	r20
+ 7de:	5f 93       	push	r21
+ 7e0:	6f 93       	push	r22
+ 7e2:	7f 93       	push	r23
+ 7e4:	8f 93       	push	r24
+ 7e6:	9f 93       	push	r25
+ 7e8:	af 93       	push	r26
+ 7ea:	bf 93       	push	r27
+ 7ec:	ef 93       	push	r30
+ 7ee:	ff 93       	push	r31
+	PressButton(UPBUTTON);
+ 7f0:	85 e0       	ldi	r24, 0x05	; 5
+ 7f2:	30 df       	rcall	.-416    	; 0x654 <PressButton>
+}
+ 7f4:	ff 91       	pop	r31
+ 7f6:	ef 91       	pop	r30
+ 7f8:	bf 91       	pop	r27
+ 7fa:	af 91       	pop	r26
+ 7fc:	9f 91       	pop	r25
+ 7fe:	8f 91       	pop	r24
+ 800:	7f 91       	pop	r23
+ 802:	6f 91       	pop	r22
+ 804:	5f 91       	pop	r21
+ 806:	4f 91       	pop	r20
+ 808:	3f 91       	pop	r19
+ 80a:	2f 91       	pop	r18
+ 80c:	0f 90       	pop	r0
+ 80e:	0b be       	out	0x3b, r0	; 59
+ 810:	0f 90       	pop	r0
+ 812:	0f be       	out	0x3f, r0	; 63
+ 814:	0f 90       	pop	r0
+ 816:	1f 90       	pop	r1
+ 818:	18 95       	reti
+
+0000081a <__vector_6>:
+
+ISR(INT5_vect)
+// Прерывание по нажатию кнопки вправо
+{
+ 81a:	1f 92       	push	r1
+ 81c:	0f 92       	push	r0
+ 81e:	0f b6       	in	r0, 0x3f	; 63
+ 820:	0f 92       	push	r0
+ 822:	11 24       	eor	r1, r1
+ 824:	0b b6       	in	r0, 0x3b	; 59
+ 826:	0f 92       	push	r0
+ 828:	2f 93       	push	r18
+ 82a:	3f 93       	push	r19
+ 82c:	4f 93       	push	r20
+ 82e:	5f 93       	push	r21
+ 830:	6f 93       	push	r22
+ 832:	7f 93       	push	r23
+ 834:	8f 93       	push	r24
+ 836:	9f 93       	push	r25
+ 838:	af 93       	push	r26
+ 83a:	bf 93       	push	r27
+ 83c:	ef 93       	push	r30
+ 83e:	ff 93       	push	r31
+	PressButton(RIGHTBUTTON);
+ 840:	86 e0       	ldi	r24, 0x06	; 6
+ 842:	08 df       	rcall	.-496    	; 0x654 <PressButton>
+}
+ 844:	ff 91       	pop	r31
+ 846:	ef 91       	pop	r30
+ 848:	bf 91       	pop	r27
+ 84a:	af 91       	pop	r26
+ 84c:	9f 91       	pop	r25
+ 84e:	8f 91       	pop	r24
+ 850:	7f 91       	pop	r23
+ 852:	6f 91       	pop	r22
+ 854:	5f 91       	pop	r21
+ 856:	4f 91       	pop	r20
+ 858:	3f 91       	pop	r19
+ 85a:	2f 91       	pop	r18
+ 85c:	0f 90       	pop	r0
+ 85e:	0b be       	out	0x3b, r0	; 59
+ 860:	0f 90       	pop	r0
+ 862:	0f be       	out	0x3f, r0	; 63
+ 864:	0f 90       	pop	r0
+ 866:	1f 90       	pop	r1
+ 868:	18 95       	reti
+
+0000086a <__vector_7>:
+
+ISR(INT6_vect)
+// Прерывание по нажатию кнопки влево
+{
+ 86a:	1f 92       	push	r1
+ 86c:	0f 92       	push	r0
+ 86e:	0f b6       	in	r0, 0x3f	; 63
+ 870:	0f 92       	push	r0
+ 872:	11 24       	eor	r1, r1
+ 874:	0b b6       	in	r0, 0x3b	; 59
+ 876:	0f 92       	push	r0
+ 878:	2f 93       	push	r18
+ 87a:	3f 93       	push	r19
+ 87c:	4f 93       	push	r20
+ 87e:	5f 93       	push	r21
+ 880:	6f 93       	push	r22
+ 882:	7f 93       	push	r23
+ 884:	8f 93       	push	r24
+ 886:	9f 93       	push	r25
+ 888:	af 93       	push	r26
+ 88a:	bf 93       	push	r27
+ 88c:	ef 93       	push	r30
+ 88e:	ff 93       	push	r31
+	
+	PressButton(LEFTBUTTON);
+ 890:	87 e0       	ldi	r24, 0x07	; 7
+ 892:	e0 de       	rcall	.-576    	; 0x654 <PressButton>
+}
+ 894:	ff 91       	pop	r31
+ 896:	ef 91       	pop	r30
+ 898:	bf 91       	pop	r27
+ 89a:	af 91       	pop	r26
+ 89c:	9f 91       	pop	r25
+ 89e:	8f 91       	pop	r24
+ 8a0:	7f 91       	pop	r23
+ 8a2:	6f 91       	pop	r22
+ 8a4:	5f 91       	pop	r21
+ 8a6:	4f 91       	pop	r20
+ 8a8:	3f 91       	pop	r19
+ 8aa:	2f 91       	pop	r18
+ 8ac:	0f 90       	pop	r0
+ 8ae:	0b be       	out	0x3b, r0	; 59
+ 8b0:	0f 90       	pop	r0
+ 8b2:	0f be       	out	0x3f, r0	; 63
+ 8b4:	0f 90       	pop	r0
+ 8b6:	1f 90       	pop	r1
+ 8b8:	18 95       	reti
+
+000008ba <__vector_8>:
+
+ISR(INT7_vect)
+//Прерывание по нажатию кнопки вниз
+{
+ 8ba:	1f 92       	push	r1
+ 8bc:	0f 92       	push	r0
+ 8be:	0f b6       	in	r0, 0x3f	; 63
+ 8c0:	0f 92       	push	r0
+ 8c2:	11 24       	eor	r1, r1
+ 8c4:	0b b6       	in	r0, 0x3b	; 59
+ 8c6:	0f 92       	push	r0
+ 8c8:	2f 93       	push	r18
+ 8ca:	3f 93       	push	r19
+ 8cc:	4f 93       	push	r20
+ 8ce:	5f 93       	push	r21
+ 8d0:	6f 93       	push	r22
+ 8d2:	7f 93       	push	r23
+ 8d4:	8f 93       	push	r24
+ 8d6:	9f 93       	push	r25
+ 8d8:	af 93       	push	r26
+ 8da:	bf 93       	push	r27
+ 8dc:	ef 93       	push	r30
+ 8de:	ff 93       	push	r31
+	
+	PressButton(DOWNBUTTON);
+ 8e0:	88 e0       	ldi	r24, 0x08	; 8
+ 8e2:	b8 de       	rcall	.-656    	; 0x654 <PressButton>
+}
+ 8e4:	ff 91       	pop	r31
+ 8e6:	ef 91       	pop	r30
+ 8e8:	bf 91       	pop	r27
+ 8ea:	af 91       	pop	r26
+ 8ec:	9f 91       	pop	r25
+ 8ee:	8f 91       	pop	r24
+ 8f0:	7f 91       	pop	r23
+ 8f2:	6f 91       	pop	r22
+ 8f4:	5f 91       	pop	r21
+ 8f6:	4f 91       	pop	r20
+ 8f8:	3f 91       	pop	r19
+ 8fa:	2f 91       	pop	r18
+ 8fc:	0f 90       	pop	r0
+ 8fe:	0b be       	out	0x3b, r0	; 59
+ 900:	0f 90       	pop	r0
+ 902:	0f be       	out	0x3f, r0	; 63
+ 904:	0f 90       	pop	r0
+ 906:	1f 90       	pop	r1
+ 908:	18 95       	reti
+
+0000090a <main>:
+
+int main(void)
+// Основная функция программы
+{
+	Init_MK(); // Инициализируем МК
+ 90a:	9b dd       	rcall	.-1226   	; 0x442 <Init_MK>
+	LCDinit();  // Инициализируем экран
+ 90c:	f9 dc       	rcall	.-1550   	; 0x300 <LCDinit>
+	ScreenUpdate(); // Выводим информацию на экран
+ 90e:	65 dd       	rcall	.-1334   	; 0x3da <ScreenUpdate>
+ 910:	ca e2       	ldi	r28, 0x2A	; 42
+    while (1) 
+	// Бесконечный цикл программы
+    {
+		DS1307_GetRealTime(); // Получаем время с часов
+		if((timeVar.realHours==timeVar.alarmHours)&&(timeVar.realMinutes==timeVar.alarmMinutes)&&(timeVar.realSeconds>=timeVar.alarmSeconds)&&beep==0)
+ 912:	d1 e0       	ldi	r29, 0x01	; 1
+		// Если часы и минуты равный будильнику, а секунды больше или равны, то срабатывает будильник. 
+		//Также проверяем, что будильник ещё не был включён
+		{
+			TIMSK=(1<<OCIE0); // Включаем таймер 0
+ 914:	12 e0       	ldi	r17, 0x02	; 2
+	LCDinit();  // Инициализируем экран
+	ScreenUpdate(); // Выводим информацию на экран
+    while (1) 
+	// Бесконечный цикл программы
+    {
+		DS1307_GetRealTime(); // Получаем время с часов
+ 916:	2c dd       	rcall	.-1448   	; 0x370 <DS1307_GetRealTime>
+ 918:	98 81       	ld	r25, Y
+		if((timeVar.realHours==timeVar.alarmHours)&&(timeVar.realMinutes==timeVar.alarmMinutes)&&(timeVar.realSeconds>=timeVar.alarmSeconds)&&beep==0)
+ 91a:	8b 81       	ldd	r24, Y+3	; 0x03
+ 91c:	98 13       	cpse	r25, r24
+ 91e:	10 c0       	rjmp	.+32     	; 0x940 <main+0x36>
+ 920:	99 81       	ldd	r25, Y+1	; 0x01
+ 922:	8c 81       	ldd	r24, Y+4	; 0x04
+ 924:	98 13       	cpse	r25, r24
+ 926:	0c c0       	rjmp	.+24     	; 0x940 <main+0x36>
+ 928:	9a 81       	ldd	r25, Y+2	; 0x02
+ 92a:	8d 81       	ldd	r24, Y+5	; 0x05
+ 92c:	98 17       	cp	r25, r24
+ 92e:	68 f0       	brcs	.+26     	; 0x94a <main+0x40>
+ 930:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <__data_end>
+ 934:	90 91 27 01 	lds	r25, 0x0127	; 0x800127 <__data_end+0x1>
+ 938:	89 2b       	or	r24, r25
+ 93a:	39 f4       	brne	.+14     	; 0x94a <main+0x40>
+ 93c:	17 bf       	out	0x37, r17	; 55
+		// Если часы и минуты равный будильнику, а секунды больше или равны, то срабатывает будильник. 
+		//Также проверяем, что будильник ещё не был включён
+		{
+			TIMSK=(1<<OCIE0); // Включаем таймер 0
+ 93e:	05 c0       	rjmp	.+10     	; 0x94a <main+0x40>
+ 940:	10 92 27 01 	sts	0x0127, r1	; 0x800127 <__data_end+0x1>
+		}
+		else if((timeVar.realHours!=timeVar.alarmHours)||(timeVar.realMinutes!=timeVar.alarmMinutes))
+		// Если же время не равно будильнику
+		{
+			beep=0; // То сбрасываем значение бип
+ 944:	10 92 26 01 	sts	0x0126, r1	; 0x800126 <__data_end>
+			TIMSK=(0<<OCIE0); // Выключаем будильник
+ 948:	17 be       	out	0x37, r1	; 55
+		}
+		ScreenUpdate(); // Выводим информацию на экран
+ 94a:	47 dd       	rcall	.-1394   	; 0x3da <ScreenUpdate>
+ 94c:	8f e3       	ldi	r24, 0x3F	; 63
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 94e:	9c e9       	ldi	r25, 0x9C	; 156
+ 950:	01 97       	sbiw	r24, 0x01	; 1
+ 952:	f1 f7       	brne	.-4      	; 0x950 <main+0x46>
+ 954:	00 c0       	rjmp	.+0      	; 0x956 <main+0x4c>
+ 956:	00 00       	nop
+ 958:	de cf       	rjmp	.-68     	; 0x916 <main+0xc>
+
+0000095a <__tablejump2__>:
+ 95a:	ee 0f       	add	r30, r30
+ 95c:	ff 1f       	adc	r31, r31
+ 95e:	00 24       	eor	r0, r0
+ 960:	00 1c       	adc	r0, r0
+ 962:	0b be       	out	0x3b, r0	; 59
+ 964:	07 90       	elpm	r0, Z+
+ 966:	f6 91       	elpm	r31, Z
+ 968:	e0 2d       	mov	r30, r0
+ 96a:	09 94       	ijmp
+
+0000096c <_exit>:
+ 96c:	f8 94       	cli
+
+0000096e <__stop_program>:
+ 96e:	ff cf       	rjmp	.-2      	; 0x96e <__stop_program>
